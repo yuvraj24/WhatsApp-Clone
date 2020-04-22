@@ -2,9 +2,9 @@
 
 ![Platform - Android, IOS and Web](https://img.shields.io/badge/platform-Android%20%7C%20IOS%20%7C%20Web-green.svg) 
 
-Whatsapp Clone provides an in depth view of implementation on how to create a full-stack, mobile, hybrid web application from scratch. This repository covers implementation of 3 major platform's mainly Android, IOS & Web using React Native & MERN stack 🔥.
+![](assets/whclone4.png)
 
-<img src='https://github.com/yuvraj24/whatsapp-clone/blob/master/assets/whclone4.png' height=600 width=1200 /> 
+Whatsapp Clone provides an in depth view of implementation on how to create a full-stack, mobile, hybrid web application from scratch. This repository covers implementation of 3 major platform's mainly Android, IOS & Web using React Native & MERN stack 🔥.
 
 You can see the following features in action in this repository,
 * *Instant & Realtime textual One to One chat*
