@@ -5,12 +5,13 @@
 Whatsapp Clone provides an in depth view of implementation on how to create a full-stack, mobile, hybrid web application from scratch. This repository covers implementation on 3 major platform's mainly Android, IOS & Web.
 
 You can see the following features in action in this repository,
-* Instant & Realtime text based chat
+* Instant & Realtime textual One to One chat
 * User's Online/Offline availability
 * Last Seen time
 * Unread Message count indicator
 * Realtime Status update
 * Multiple Status view along with progress 
+* Web Login via QR code scan
 
 ## Spread Your ❤️
 [![GitHub followers](https://img.shields.io/github/followers/yuvraj24.svg?style=social&label=Follow)](https://github.com/yuvraj24)  [![Twitter Follow](https://img.shields.io/twitter/follow/yuvrajpy24.svg?style=social)](https://twitter.com/yuvrajpy24)
