@@ -1,4 +1,4 @@
-import cors from "cors";
+import cors from "cors.js";
 import express from "express";
 import chatRouter from "./router/chatRouter";
 import roomRouter from "./router/roomRouter";
@@ -27,12 +27,12 @@ if (!config.get("privateKey")) {
   process.exit(1);
 }
 
-app.get("/ping", (_req: any, res: { send: (arg0: string) => void }) => {
+app.get("/ping", (_req, res) => {
   res.send("pong");
 });
 
 // MongoDb setup -----
-db.on("error", (error: any) => {
+db.on("error", (error) => {
   console.log("Mongoose Connection Error : " + JSON.stringify(error));
 });
 
@@ -43,10 +43,10 @@ server.listen(port, () => {
 });
 
 const socket = require("socket.io").listen(server);
-socket.on("connection", (socketConnection: any) => {
+socket.on("connection", (socketConnection) => {
   console.log("Socket.io connected");
 
-  socketConnection.on("CHAT_LIST", (msg: any) => {
+  socketConnection.on("CHAT_LIST", (msg) => {
     // console.log("CHAT_LIST == ", msg);
 
     // Save User unread count to Chat List table
@@ -55,18 +55,18 @@ socket.on("connection", (socketConnection: any) => {
     socket.emit("CHAT_LIST", msg);
   });
 
-  socketConnection.on("CHAT_ROOM", (msg: any) => {
+  socketConnection.on("CHAT_ROOM", (msg) => {
     // console.log("CHAT_ROOM == ", msg);
     socket.emit("CHAT_ROOM", msg);
     // socket.emit("CHAT_LIST", msg);
   });
 
-  socketConnection.on("SCAN_QR_CODE", (msg: any) => {
+  socketConnection.on("SCAN_QR_CODE", (msg) => {
     console.log("SCAN_QR_CODE == ", msg);
     socket.emit("SCAN_QR_CODE", msg);
   });
 
-  socketConnection.on("LAST_SEEN", (msg: any) => {
+  socketConnection.on("LAST_SEEN", (msg) => {
     // console.log("LAST_SEEN == ", msg);
 
     // Save User Last seen to Chat Room table
@@ -75,7 +75,7 @@ socket.on("connection", (socketConnection: any) => {
     socket.emit("LAST_SEEN", msg);
   });
 
-  socketConnection.on("USER_STATUS", (msg: any) => {
+  socketConnection.on("USER_STATUS", (msg) => {
     console.log("USER_STATUS == ", msg);
     socket.emit("USER_STATUS", msg);
   });
