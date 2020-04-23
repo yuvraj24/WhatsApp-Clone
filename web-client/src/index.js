@@ -1,6 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css'; 
+import ReactDOM from 'react-dom'; 
 import WebAppNavigator from "./modules/qrcode/WebAppNavigator";
 
 ReactDOM.render(

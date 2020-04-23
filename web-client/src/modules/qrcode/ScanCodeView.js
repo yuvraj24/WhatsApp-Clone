@@ -57,7 +57,7 @@ const ScanCodeView = ({ params }) => {
         <meta
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width"
-        />
+        /> 
       </head>
       <body className={classes.body}>
         <div className={classes.body}>
@@ -193,6 +193,8 @@ const useStyles = makeStyles({
   body: {
     backgroundColor: APP_BG_COLOR,
     height: window.innerHeight,
+    margin: -8,
+    padding: 0,
   },
   checkStyle: {
     marginLeft: 90,

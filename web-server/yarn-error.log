@@ -24,7 +24,7 @@ npm manifest:
     "description": "",
     "main": "index.js",
     "scripts": {
-      "start": "nodemon index.ts",
+      "start": "node index.js",
       "test": "echo \"Error: no test specified\" && exit 1"
     },
     "author": "",
