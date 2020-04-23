@@ -20,6 +20,6 @@
     "jsx": "react"
   },
   "include": [
-    "src"
+    "src", "src/App.js", "src/index.js"
   ]
 }
