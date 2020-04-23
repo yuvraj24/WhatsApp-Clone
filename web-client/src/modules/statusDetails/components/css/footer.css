@@ -1,0 +1,46 @@
+.parentStyle {
+  display: flex; 
+  /* top: 0;
+  left: 0;
+  right: 0;
+  margin-top: 1%; */
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  flex-direction: column;
+  /* background-color: brown; */
+}
+
+.innerDiv {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+}
+
+.imgStyle {
+  width: 30px;
+  height: 30px;
+  align-self: center;
+  cursor:pointer;
+}
+
+.inputStyle {
+  font-size: 16px;
+  color: white;
+  margin-left: 10pt;
+  margin-right: 10pt;
+  width: 60%;
+  border-radius: 10px;
+  padding: 8px; 
+  max-height: 120pt;
+  height: 50pt;
+  background-color: #000000cc;
+  border-color: #000000cc;
+  outline: unset;
+  display: flex; 
+  resize: both;
+  text-align: start;
+  vertical-align: middle;
+  overflow: unset;
+}

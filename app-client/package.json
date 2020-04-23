@@ -1,0 +1,55 @@
+{
+  "name": "WhatsappClone",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "start": "react-native start",
+    "test": "jest",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@react-native-community/async-storage": "^1.8.1",
+    "@react-native-community/masked-view": "^0.1.6",
+    "@react-native-firebase/app": "^6.4.0",
+    "@react-native-firebase/storage": "^6.4.0",
+    "@react-navigation/native": "^5.0.5",
+    "@react-navigation/stack": "^5.0.5",
+    "axios": "^0.19.2",
+    "moment": "^2.24.0",
+    "native-base": "^2.13.8",
+    "react": "16.11.0",
+    "react-native": "^0.61.5",
+    "react-native-camera": "^3.22.1",
+    "react-native-contacts": "^5.1.0",
+    "react-native-country-picker-modal": "^1.10.0",
+    "react-native-gesture-handler": "^1.6.0",
+    "react-native-material-menu": "^1.0.0",
+    "react-native-reanimated": "^1.7.0",
+    "react-native-safe-area-context": "^0.7.3",
+    "react-native-screens": "^2.0.0-beta.4",
+    "react-native-stories-view": "^1.0.6",
+    "react-native-vector-icons": "^6.6.0",
+    "socket.io-client": "^2.3.0"
+  },
+  "devDependencies": {
+    "@babel/core": "7.8.4",
+    "@babel/runtime": "7.8.4",
+    "@react-native-community/eslint-config": "0.0.5",
+    "babel-jest": "24.9.0",
+    "eslint": "6.8.0",
+    "jest": "24.9.0",
+    "metro": "^0.59.0",
+    "metro-react-native-babel-preset": "0.56.4",
+    "react-test-renderer": "16.9.0"
+  },
+  "jest": {
+    "preset": "react-native"
+  },
+  "rnpm": {
+    "assets": [
+      "./assets/fonts"
+    ]
+  }
+}

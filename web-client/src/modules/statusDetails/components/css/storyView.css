@@ -1,0 +1,23 @@
+.divStory {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  width: 100%; 
+}
+
+.imgStory {
+  display: flex;
+  align-self: center;
+  justify-content: center; 
+  width: 50%;
+  height: 100%;
+  left: 25%; 
+  right: 25%; 
+  position: absolute;
+  image-orientation: from-image;
+  transform: rotate(90deg);
+  /* object-fit: cover; */
+}

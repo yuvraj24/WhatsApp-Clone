@@ -1,0 +1,38 @@
+.parentArrow {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  justify-content: space-between;
+  position: absolute;
+  top: 50%;
+}
+
+.imgLeftStyle {
+  width: 15px;
+  height: 15px;
+  margin-top: 2px;
+  margin-right: 3px;
+  cursor: pointer;
+}
+
+.imgRightStyle {
+  width: 15px;
+  height: 15px;
+  margin-top: 2px;
+  margin-left: 3px;
+  cursor: pointer;
+}
+
+.circleDiv {
+  width: 20px;
+  height: 20px;
+  padding: 10px;
+  background-color: #0000004d;
+  background-size: cover;
+  border-radius: 100%;
+  margin-left: 2%;
+  margin-right: 2%;
+  justify-content: center;
+}

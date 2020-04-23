@@ -1,0 +1,17 @@
+.parentStyle {
+  display: inline-block;
+  position: "absolute";
+  top: 0;
+  left: 0;
+  right: 0;
+  align-self: center;
+  justify-content: center;
+  align-content: center;  
+}
+
+.parentItemStyle {
+  display: inline-block;
+  align-self: center;
+  justify-content: center;
+  /* position: absolute; */
+}
