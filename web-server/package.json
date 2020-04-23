@@ -4,10 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js", 
+    "build": "webpack"
   },
-  "author": "",
+  "engines": {
+    "node": "10.16.x",
+    "npm": "6.x"
+  },
+  "author": "Yuvraj Pandey",
   "license": "ISC",
   "dependencies": {
     "@types/mongoose": "^5.7.7",
