@@ -1,4 +1,4 @@
-import cors from "cors.js";
+import cors from "cors";
 import express from "express";
 import chatRouter from "./router/chatRouter";
 import roomRouter from "./router/roomRouter";
