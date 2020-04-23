@@ -1,4 +1,3 @@
-import cors from "cors";
 import express from "express";
 import chatRouter from "./router/chatRouter";
 import roomRouter from "./router/roomRouter";
@@ -7,6 +6,7 @@ import statusRouter from "./router/statusRouter";
 import db from "./db/index";
 import { saveUserLastSeen } from "./controller/lastSeenController";
 import config from "config";
+import cors from "cors";
 
 // Express setup -----
 const app = express();
@@ -27,12 +27,12 @@ if (!config.get("privateKey")) {
   process.exit(1);
 }
 
-app.get("/ping", (_req, res) => {
+app.get("/ping", (_req: any, res: { send: (arg0: string) => void }) => {
   res.send("pong");
 });
 
 // MongoDb setup -----
-db.on("error", (error) => {
+db.on("error", (error: any) => {
   console.log("Mongoose Connection Error : " + JSON.stringify(error));
 });
 
@@ -43,10 +43,10 @@ server.listen(port, () => {
 });
 
 const socket = require("socket.io").listen(server);
-socket.on("connection", (socketConnection) => {
+socket.on("connection", (socketConnection: any) => {
   console.log("Socket.io connected");
 
-  socketConnection.on("CHAT_LIST", (msg) => {
+  socketConnection.on("CHAT_LIST", (msg: any) => {
     // console.log("CHAT_LIST == ", msg);
 
     // Save User unread count to Chat List table
@@ -55,18 +55,18 @@ socket.on("connection", (socketConnection) => {
     socket.emit("CHAT_LIST", msg);
   });
 
-  socketConnection.on("CHAT_ROOM", (msg) => {
+  socketConnection.on("CHAT_ROOM", (msg: any) => {
     // console.log("CHAT_ROOM == ", msg);
     socket.emit("CHAT_ROOM", msg);
     // socket.emit("CHAT_LIST", msg);
   });
 
-  socketConnection.on("SCAN_QR_CODE", (msg) => {
+  socketConnection.on("SCAN_QR_CODE", (msg: any) => {
     console.log("SCAN_QR_CODE == ", msg);
     socket.emit("SCAN_QR_CODE", msg);
   });
 
-  socketConnection.on("LAST_SEEN", (msg) => {
+  socketConnection.on("LAST_SEEN", (msg: any) => {
     // console.log("LAST_SEEN == ", msg);
 
     // Save User Last seen to Chat Room table
@@ -75,7 +75,7 @@ socket.on("connection", (socketConnection) => {
     socket.emit("LAST_SEEN", msg);
   });
 
-  socketConnection.on("USER_STATUS", (msg) => {
+  socketConnection.on("USER_STATUS", (msg: any) => {
     console.log("USER_STATUS == ", msg);
     socket.emit("USER_STATUS", msg);
   });
