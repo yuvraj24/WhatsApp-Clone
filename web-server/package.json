@@ -2,10 +2,9 @@
   "name": "web-server",
   "version": "1.0.0",
   "description": "",
-  "main": "index.ts",
+  "main": "index.ss",
   "scripts": {
-    "start": "nodemon index.ts", 
-    "build": "webpack"
+    "start": "nodemon index.ts"
   },
   "engines": {
     "node": "10.16.x",
