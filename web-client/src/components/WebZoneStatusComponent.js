@@ -79,9 +79,9 @@ const useStyles = makeStyles({
     flexDirection: "column",
     alignItems: "center",
     alignSelf: "center",
-    justifyContent: "center",
-    fontWeight: 500,
+    justifyContent: "center", 
     display: "flex",
+    fontFamily:'Roboto'
   },
   alertIcon: {
     height: 80,

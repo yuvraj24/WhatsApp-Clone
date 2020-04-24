@@ -37,7 +37,7 @@ const ScanCodeView = ({ params }) => {
         storeLocalData(webConstants.USER_ID, msg.userId);
         storeLocalData(webConstants.USER_NAME, msg.userName);
         socket.removeListener(webConstants.SCAN_QR_CODE);
-        window.location = "/home";
+        window.location.hash = "/chat";
       }
       console.log(msg);
     });
@@ -57,7 +57,7 @@ const ScanCodeView = ({ params }) => {
         <meta
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width"
-        /> 
+        />
       </head>
       <body className={classes.body}>
         <div className={classes.body}>
@@ -71,6 +71,9 @@ const ScanCodeView = ({ params }) => {
             <Button
               startIcon={<Icon style={{ fontSize: 40 }} />}
               style={{ marginTop: "2%", color: WHITE }}
+              onClick={() => {
+                window.location.hash = "/chat";
+              }}
             >
               <Typography
                 variant={"button"}

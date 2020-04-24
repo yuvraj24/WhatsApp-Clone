@@ -98,6 +98,7 @@ export const WebStatusProgressView = ({ statusData, isUser, dispatch, toggleStat
       style={{
         height: "100%",
         width: "100%",
+        fontFamily:'Roboto'
       }}
       imageStyle={{
         height: window.innerHeight,

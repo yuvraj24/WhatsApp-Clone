@@ -1,4 +1,4 @@
-import React, {Component, useState, useEffect} from 'react';
+import React, {Component, useState, useEffect, useRef} from 'react';
 import {
   SafeAreaView,
   StyleSheet,
@@ -47,6 +47,7 @@ import {getLoginModel} from '../../utils/helperModels';
 import {StackActions} from '@react-navigation/native';
 import {loginUser} from '../../api/apiController';
 import {BorderlessButton} from 'react-native-gesture-handler';
+import LoadingComponent from '../../components/LoadingComponent';
 
 var {
   container,
@@ -58,6 +59,7 @@ var {
 const LoginScreen = ({navigation}) => {
   const [userName, setUserName] = useState('');
   const [mobile, setMobile] = useState('');
+  const [isLoading, setLoading] = useState(false); 
 
   useEffect(() => {
     getLocalData(constants.USER_ID)
@@ -78,12 +80,18 @@ const LoginScreen = ({navigation}) => {
     } else if (mobile === '') {
       showToast({text: 'Enter your Mobile Number', type: 'danger'});
     } else {
+      setLoading(!isLoading);
       loginUser(getLoginModel(userName, mobile))
         .then(res => {
           console.log('LOGIN RESPONSE => ' + JSON.stringify(res));
           if (res.data.success) {
-            console.log('TOKEN : ', res.headers.token)
-            storeLocalData(constants.ACCESS_TOKEN, res.headers.token)
+            setLoading(isLoading);
+            console.log('TOKEN : ', res.headers.token);
+            setUserName('');
+            setMobile('');
+            console.log('LOGIN RESPONSE => ' + JSON.stringify(res));
+
+            storeLocalData(constants.ACCESS_TOKEN, res.headers.token);
             storeLocalData(constants.USER_ID, res.data.id);
             storeLocalData(constants.USER_NAME, userName);
 
@@ -103,6 +111,8 @@ const LoginScreen = ({navigation}) => {
   return (
     <Root style={[container, {flexDirection: 'column'}]}>
       <SafeAreaView style={container}>
+        {isLoading && <LoadingComponent />}
+        {/* {!isLoading && ( */}
         <KeyboardAvoidingView behavior="padding" style={styles.keyboardView}>
           <View style={styles.headerView}>
             <Icon type="FontAwesome" name="whatsapp" style={styles.logoStyle} />
@@ -121,6 +131,7 @@ const LoginScreen = ({navigation}) => {
                 </_Text>
 
                 <_TextInput
+                  value={userName}
                   inputStyle={[poppinsMedium, styles.inputStyle]}
                   floatingLabel={false}
                   keyboardType={'default'}
@@ -135,6 +146,7 @@ const LoginScreen = ({navigation}) => {
                 </_Text>
 
                 <_TextInput
+                  value={mobile}
                   inputStyle={[poppinsMedium, styles.inputStyle]}
                   floatingLabel={false}
                   keyboardType={'numeric'}
@@ -158,6 +170,7 @@ const LoginScreen = ({navigation}) => {
             </View>
           </ScrollView>
         </KeyboardAvoidingView>
+        {/* )} */}
       </SafeAreaView>
     </Root>
   );

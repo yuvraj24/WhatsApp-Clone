@@ -184,6 +184,7 @@ const styles = {
     flex: 1,
     display: "flex",
     overflow: "hidden",
+    margin: -8
   },
   paperView: {
     flex: 0.3,

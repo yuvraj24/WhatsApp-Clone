@@ -12,8 +12,7 @@ export const loginUser = async (req: any, res: any) => {
   }
 
   const user = (await LoginUserModel.findOne({
-    userName: body.userName,
-    phoneNumber: body.phoneNumber,
+    $or: [{ userName: body.userName }, { phoneNumber: body.phoneNumber }],
   })) as any;
 
   try {

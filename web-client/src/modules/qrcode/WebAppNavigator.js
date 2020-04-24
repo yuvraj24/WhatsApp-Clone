@@ -3,10 +3,11 @@ import { themeConfig } from "../../utils/ThemeUtils";
 import {
   getSocket,
   storeLocalData,
-  getLocalData
+  getLocalData,
 } from "../../utils/webHelperFunctions";
 import { webConstants } from "../../utils/webConstants";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import WebHomeScreen from "../home/WebHomeScreen";
 import ScanCodeView from "./ScanCodeView";
 import React, { useEffect } from "react";
@@ -23,15 +24,12 @@ const WebAppNavigator = ({ params }) => {
 
   return (
     <ThemeProvider theme={themeConfig}>
-      <Router>
-        <div>
-          <Switch>
-            <Route path="/users" exact component={WebContactsView} />
-            <Route path="/home" exact component={WebHomeScreen} />
-            <Route path="/" component={ScanCodeView} />
-          </Switch>
-        </div>
-      </Router>
+      <HashRouter>
+        <Switch> 
+          <Route path="/chat" exact component={WebHomeScreen} />
+          <Route path="/" component={ScanCodeView} />
+        </Switch>
+      </HashRouter>
     </ThemeProvider>
   );
 };

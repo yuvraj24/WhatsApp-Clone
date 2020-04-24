@@ -53,6 +53,7 @@ class _TextInput extends Component {
     const {isFocused} = this.state;
     const {defaultItem, defaultLabel, defaultInput} = inputDefaultStyle;
     const {
+      ref,
       isMandatory,
       placeholder,
       value,
@@ -95,6 +96,7 @@ class _TextInput extends Component {
         {/* <Icon style={{color: INPUT_ICON}} name={leftIcon} type={leftIconType} /> */}
         {/* <Label style={[defaultLabel, labelStyle]}> {placeholder}</Label> */}
         <Input
+          ref={ref}
           selectionColor={selectionColor}
           maxLength={maxLength}
           editable={editable}

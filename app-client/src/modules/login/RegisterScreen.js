@@ -1,4 +1,4 @@
-import React, {Component, useState, useEffect} from 'react';
+import React, {Component, useState, useEffect, useRef} from 'react';
 import {
   SafeAreaView,
   StyleSheet,
@@ -48,6 +48,7 @@ import {getLoginModel} from '../../utils/helperModels';
 import {StackActions} from '@react-navigation/native';
 import {loginUser} from '../../api/apiController';
 import {BorderlessButton} from 'react-native-gesture-handler';
+import LoadingComponent from '../../components/LoadingComponent';
 
 var {
   container,
@@ -61,6 +62,7 @@ const RegisterScreen = ({navigation}) => {
   const [country, setCountry] = useState('');
   const [userName, setUserName] = useState('');
   const [mobile, setMobile] = useState('');
+  const [isLoading, setLoading] = useState(false); 
 
   useEffect(() => {
     getLocalData(constants.USER_ID)
@@ -89,11 +91,17 @@ const RegisterScreen = ({navigation}) => {
     } else if (mobile === '') {
       showToast({text: 'Enter your Mobile Number', type: 'danger'});
     } else {
+      setLoading(!isLoading);
       loginUser(getLoginModel(userName, mobile))
         .then(res => {
+          setLoading(isLoading);
+          console.log('TOKEN : ', res.headers.token);
+          setUserName('');
+          setMobile('');
           console.log('LOGIN RESPONSE => ' + JSON.stringify(res));
+
           if (res.data.success) {
-            storeLocalData(constants.ACCESS_TOKEN, res.headers.x-auth-token)
+            storeLocalData(constants.ACCESS_TOKEN, res.headers.token);
             storeLocalData(constants.USER_ID, res.data.id);
             storeLocalData(constants.USER_NAME, userName);
 
@@ -113,93 +121,106 @@ const RegisterScreen = ({navigation}) => {
   return (
     <SafeAreaView style={container}>
       <KeyboardAvoidingView behavior="padding" style={styles.keyboardView}>
-        <Root style={[container, {flexDirection: 'column'}]}>
-          <View style={styles.headerView}>
-            <Icon type="FontAwesome" name="whatsapp" style={styles.logoStyle} />
-            <_Text style={styles.logoTextStyle}>{constants.APP_NAME}</_Text>
-          </View>
-          <ScrollView
-            keyboardShouldPersistTaps="handled"
-            contentContainerStyle={{
-              flex: 1,
-              justifyContent: 'center',
-            }}>
-            <View style={styles.contentView}>
-              <_Text description style={[poppinsRegular, styles.inputStyle]}>
-                Country
-              </_Text>
-              <View style={{flexDirection: 'column'}}>
-                {/* <_TextInput editable={true} style={{width:'20%'}} /> */}
-                <CountryPicker
-                  containerButtonStyle={{
-                    height: 40,
-                    marginTop: 5,
-                    justifyContent: 'center',
-                  }}
-                  countryCode={countryCode}
-                  withCountryNameButton={true}
-                  visible={false}
-                  withFlag={true}
-                  withCloseButton={true}
-                  withAlphaFilter={true}
-                  withCallingCode={true}
-                  //   withCurrency={true}
-                  withEmoji={true}
-                  withCountryNameButton={true}
-                  //   withCurrencyButton={true}
-                  //   withCallingCodeButton={true}
-                  withFilter={true}
-                  withModal={true}
-                  onSelect={onSelect}
-                />
-                <View style={{height: '3%', backgroundColor: GREEN}} />
-              </View>
-
-              <View style={{flexDirection: 'column', marginTop: '-4%'}}>
-                <_Text description style={[poppinsRegular, styles.labelStyle]}>
-                  Enter Name
-                </_Text>
-
-                <_TextInput
-                  inputStyle={[poppinsMedium, styles.inputStyle]}
-                  floatingLabel={false}
-                  keyboardType={'default'}
-                  containerStyle={{width: '100%', marginLeft: 0}}
-                  onChangeText={data => {
-                    setUserName(data.value);
-                  }}
-                />
-
-                <_Text description style={[poppinsRegular, styles.labelStyle]}>
-                  Mobile Number
-                </_Text>
-
-                <_TextInput
-                  inputStyle={[poppinsMedium, styles.inputStyle]}
-                  floatingLabel={false}
-                  keyboardType={'numeric'}
-                  containerStyle={{width: '100%', marginLeft: 0}}
-                  onChangeText={data => {
-                    setMobile(data.value);
-                  }}
-                />
-              </View>
-
-              <View style={styles.buttonLoginView}>
-                <Button onPress={() => onSignUpClick()} style={styles.login}>
-                  <Text style={{fontSize: 18, fontWeight: 'bold'}}>
-                    Sign Up
-                  </Text>
-                </Button>
-                <BorderlessButton
-                  onPress={() => onLoginClick()}
-                  style={styles.buttonSignupView}>
-                  <Text style={styles.signup}>Login</Text>
-                </BorderlessButton>
-              </View>
+        {isLoading && <LoadingComponent />}
+        {!isLoading && (
+          <Root style={[container, {flexDirection: 'column'}]}>
+            <View style={styles.headerView}>
+              <Icon
+                type="FontAwesome"
+                name="whatsapp"
+                style={styles.logoStyle}
+              />
+              <_Text style={styles.logoTextStyle}>{constants.APP_NAME}</_Text>
             </View>
-          </ScrollView>
-        </Root>
+            <ScrollView
+              keyboardShouldPersistTaps="handled"
+              contentContainerStyle={{
+                flex: 1,
+                justifyContent: 'center',
+              }}>
+              <View style={styles.contentView}>
+                <_Text description style={[poppinsRegular, styles.inputStyle]}>
+                  Country
+                </_Text>
+                <View style={{flexDirection: 'column'}}>
+                  {/* <_TextInput editable={true} style={{width:'20%'}} /> */}
+                  <CountryPicker
+                    containerButtonStyle={{
+                      height: 40,
+                      marginTop: 5,
+                      justifyContent: 'center',
+                    }}
+                    countryCode={countryCode}
+                    withCountryNameButton={true}
+                    visible={false}
+                    withFlag={true}
+                    withCloseButton={true}
+                    withAlphaFilter={true}
+                    withCallingCode={true}
+                    //   withCurrency={true}
+                    withEmoji={true}
+                    withCountryNameButton={true}
+                    //   withCurrencyButton={true}
+                    //   withCallingCodeButton={true}
+                    withFilter={true}
+                    withModal={true}
+                    onSelect={onSelect}
+                  />
+                  <View style={{height: '3%', backgroundColor: GREEN}} />
+                </View>
+
+                <View style={{flexDirection: 'column', marginTop: '-4%'}}>
+                  <_Text
+                    description
+                    style={[poppinsRegular, styles.labelStyle]}>
+                    Enter Name
+                  </_Text>
+
+                  <_TextInput
+                    value={userName}
+                    inputStyle={[poppinsMedium, styles.inputStyle]}
+                    floatingLabel={false}
+                    keyboardType={'default'}
+                    containerStyle={{width: '100%', marginLeft: 0}}
+                    onChangeText={data => {
+                      setUserName(data.value);
+                    }}
+                  />
+
+                  <_Text
+                    description
+                    style={[poppinsRegular, styles.labelStyle]}>
+                    Mobile Number
+                  </_Text>
+
+                  <_TextInput
+                    value={mobile}
+                    inputStyle={[poppinsMedium, styles.inputStyle]}
+                    floatingLabel={false}
+                    keyboardType={'numeric'}
+                    containerStyle={{width: '100%', marginLeft: 0}}
+                    onChangeText={data => {
+                      setMobile(data.value);
+                    }}
+                  />
+                </View>
+
+                <View style={styles.buttonLoginView}>
+                  <Button onPress={() => onSignUpClick()} style={styles.login}>
+                    <Text style={{fontSize: 18, fontWeight: 'bold'}}>
+                      Sign Up
+                    </Text>
+                  </Button>
+                  <BorderlessButton
+                    onPress={() => onLoginClick()}
+                    style={styles.buttonSignupView}>
+                    <Text style={styles.signup}>Login</Text>
+                  </BorderlessButton>
+                </View>
+              </View>
+            </ScrollView>
+          </Root>
+        )}
       </KeyboardAvoidingView>
     </SafeAreaView>
   );

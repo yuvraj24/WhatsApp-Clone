@@ -7,12 +7,13 @@ import db from "./db/index";
 import { saveUserLastSeen } from "./controller/lastSeenController";
 import config from "config";
 import cors from "cors";
+import path from "path";
 
 // Express setup -----
 const app = express();
 
 app.use(cors());
-app.use(express.json());
+app.use(express.json()); 
 
 app.use("/api/user", userRouter);
 app.use("/api/chat", chatRouter);

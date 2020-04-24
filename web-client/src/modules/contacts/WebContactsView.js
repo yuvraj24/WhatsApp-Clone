@@ -50,7 +50,7 @@ const WebContactsView = ({ onChatCloseClick, onItemClick }) => {
         item={contacts ? contacts.length : 0}
         onChatCloseClick={onChatCloseClick}
       />
-      <div  >
+      <div style={styles.parent} >
         {contacts.length <= 0 && <EmptyComponent message={"No User Found"} />}
 
         {contacts.length > 0 && (

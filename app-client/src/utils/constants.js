@@ -2,18 +2,22 @@ import {Platform} from 'react-native';
 
 export default (constants = {
   API: {
-    SERVER_URL:
-      Platform.OS === 'android'
-        ? 'http://10.0.2.2:3000/api'
-        : 'http://192.168.0.100:3000/api',
-    // : 'http://localhost:3000/api',
-    SOCKET_URL:
-      Platform.OS === 'android'
-        ? 'http://10.0.2.2:3000/'
-        // : 'http://192.168.0.100/',
-        : 'http://192.168.0.100:3000/',
-        // : 'http://192.168.0.100/api',
-    // : 'http://localhost:3000/',
+    // SERVER_URL:
+    //   Platform.OS === 'android'
+    //     ? 'http://10.0.2.2:3000/api'
+    //     : 'http://192.168.0.100:3000/api',
+    // // : 'http://localhost:3000/api',
+    // SOCKET_URL:
+    //   Platform.OS === 'android'
+    //     ? 'http://10.0.2.2:3000/'
+    //     // : 'http://192.168.0.100/',
+    //     : 'http://192.168.0.100:3000/',
+    //     // : 'http://192.168.0.100/api',
+    // // : 'http://localhost:3000/',
+
+    SERVER_URL: "https://watsappclone.herokuapp.com/api",
+    SOCKET_URL: "https://watsappclone.herokuapp.com/", 
+
     LOGIN_USER: '/user/loginUser',
     USER_LIST: '/user/userList',
     CHAT_LIST: '/chat/chatList',
