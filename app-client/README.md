@@ -11,7 +11,7 @@ Following are the main technologies used in order to construct this mobile app,
 * <a href="https://github.com/react-native-community/react-native-camera">React Native Camera</a><br>
 * <a href="https://github.com/react-native-community/async-storage">AsyncStorage</a><br>
 
-## Live Action 🌏
+## Live Action 📱
 Donwload the Android apk from the link below for live experience of this app.
 
 <a href="https://github.com/yuvraj24/WhatsApp-Clone/blob/master/assets/WHClone_android_v1.apk">WhatsApp Clone : Android</a>
@@ -34,13 +34,14 @@ Refer the following links for platform specific implementation,
 | :-----------: | :---------: | :----------: | :----------: | :------------: | :---------: | :----------: |
 | ![](../assets/wh_android1.png) | ![](../assets/wh_android2.png) | ![](../assets/wh_android3.png) | ![](../assets/wh_android8.png) | ![](../assets/wh_android5.png) | ![](../assets/wh_android4.png)  | ![](../assets/wh_android6.png) |
 
-## Firebase Hosting 🔥
-Firebase Hosting allows fast and secure hosting for our web application, static and dynamic content, and microservices. It is production-grade web content hosting for the developers. We can easily and quickly deploy web apps and serve both static and dynamic content to a global content delivery network with only a single command. We can pair Firebase Hosting with Cloud Function for building and hosting microservices on Firebase. 
+## Firebase Storage 🔥
+Cloud Storage for Firebase lets you upload and share user generated content, such as images and video, which allows you to build rich media content into your apps. Your data is stored in a Google Cloud Storage bucket, an exabyte scale object storage solution with high availability and global redundancy. Cloud Storage lets you securely upload these files directly from mobile devices and web browsers, handling spotty networks with ease.
 
-Firebase Hosting, by default, provides an SSL certificate and offers an impressive speed across several geographical locations without any requirement for a separate CDN on top
+*The mobile app uses Firebase Storage to upload and download images for WhatsApp Clone Status view.*
 
-* <a href="https://firebase.google.com/docs/hosting/use-cases">What can I do with Firebase Hosting?</a>
-* <a href="https://firebase.google.com/docs/cli">Website Deployment steps</a>
+* <a href="https://firebase.google.com/docs/storage/android/start">Get started for Android</a> 
+* <a href="https://firebase.google.com/docs/storage/ios/start">Get started for IOS</a> 
+* <a href="https://rnfirebase.io/storage/usage">Get started for React Native</a> 
 
 ## Getting Started ✨
 
