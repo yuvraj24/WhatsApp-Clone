@@ -1,68 +1,62 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# WhatsApp-Clone-Web 
+In an increasingly web-centric world, the website is generally its first impression as well as its first interaction with customers. This part of the repository mainly deals with the web client implementation of the Whatsapp clone. This represents the web version of Whtsapp which you use along side their mobile application.
 
-## Available Scripts
+Following are the main technologies used in order to construct this frontend,
+* <a href="https://reactjs.org/">ReactJs</a> 
+* <a href="https://www.typescriptlang.org/">Typescript</a>
+* <a href="https://github.com/bvaughn/react-virtualized">React Virtualized</a> 
+* <a href="https://material-ui.com/">Material UI</a>
+* <a href="https://github.com/axios/axios">Axios</a>
+* <a href="https://socket.io/">Socket.io-client</a><br> 
 
-In the project directory, you can run:
+## Firebase Hosting Deployment 🔥
+Firebase Hosting allows fast and secure hosting for our web application, static and dynamic content, and microservices. It is production-grade web content hosting for the developers. We can easily and quickly deploy web apps and serve both static and dynamic content to a global content delivery network with only a single command. We can pair Firebase Hosting with Cloud Function for building and hosting microservices on Firebase. 
 
-### `npm start`
+Firebase Hosting, by default, provides an SSL certificate and offers an impressive speed across several geographical locations without any requirement for a separate CDN on top
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+* <a href="https://firebase.google.com/docs/hosting/use-cases">What can I do with Firebase Hosting?</a>
+* <a href="https://firebase.google.com/docs/cli">Website Deployment steps</a>
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Getting Started ✨
 
-### `npm test`
+This project follows the same steps as compared to Whatsapp web in order to access your chat. 
+* The very first page of the project displays a Qr Code which you have to scan from your logged in mobile app.
+* On successfull completion of scan you will be redirected to the home page where in you can see your chats & status.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Install Dependencies
+Just execute the command below & it will install all the dependencies mentioned in the ```package.json``` file of the project.
+```js
+npm install
+```
 
-### `npm run build`
+### Start Whatsapp Clone Web
+Runs the app in the development mode. Open http://localhost:3000 to view it in the browser.
+```js
+npm start
+```
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```js
+npm test
+```
+Launches the test runner in the interactive watch mode. See the section about running tests for more information.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+```js
+npm run build
+```
+Builds the app for production to the build folder. It correctly bundles React in production mode and optimizes the build for the best performance. The build is minified and the filenames include the hashes. Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+See the section about <a href="https://facebook.github.io/create-react-app/docs/deployment">deployment</a> for more information.
+ 
+## Other Platforms
+Refer the following links for platform specific implementation,
+* <a href="https://github.com/yuvraj24/WhatsApp-Clone/tree/master/app-client">Mobile App Client (Android & IOS)</a>
+* <a href="https://github.com/yuvraj24/WhatsApp-Clone/tree/master/web-server">Web Server (Backend)</a>
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Author  ✍️
+### *Yuvraj Pandey*
+*I am a passionate Engineer which likes to push himself on various fronts of technologies.*  
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+For more exciting updates follow me,
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+<a href="https://twitter.com/yuvrajpy24" target="_blank"><img src="https://github.com/yuvraj24/LiveSmashBar/blob/master/images/twitter.png" width="40" height="40"></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.linkedin.com/in/yuvraj24" target="_blank"><img src="https://github.com/yuvraj24/LiveSmashBar/blob/master/images/linkedin.png" width="40" height="40"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/yuvraj24" target="_blank"><img src="https://github.com/yuvraj24/LiveSmashBar/blob/master/images/github.png" height="40"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://medium.com/@yuvrajpandey24" target="_blank"><img src="https://github.com/yuvraj24/LiveSmashBar/blob/master/images/medium.png" width="40" height="40"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://play.google.com/store/apps/developer?id=Yuvraj+Pandey"><img src="https://github.com/yuvraj24/LiveSmashBar/blob/master/images/playstore.png" width="40" height="40"></a>
