@@ -2,7 +2,7 @@
 
 ![Platform - Android, IOS and Web](https://img.shields.io/badge/platform-Android%20%7C%20IOS%20%7C%20Web-green.svg) 
 
-![](assets/WHClone1.jpg)
+![](assets/whclone4.png)
 
 Whatsapp Clone provides an in depth view of implementation on how to create a full-stack, mobile, hybrid web application from scratch. This repository covers implementation of 3 major platform's mainly Android, IOS & Web using React Native & MERN stack 🔥.
 
@@ -24,9 +24,9 @@ You can see the following features in action in this repository,
 
 ## Platform Support ✨
 Refer the following links for platform specific implementation,
-* <a href="https://github.com/yuvraj24/WhatsApp-Clone/edit/master/app-client">Mobile App Client (Android & IOS)</a>
-* <a href="https://github.com/yuvraj24/WhatsApp-Clone/edit/master/web-client">Web App Client (WhatsApp Clone Web)</a>
-* <a href="https://github.com/yuvraj24/WhatsApp-Clone/tree/master/web-server">Web Server (Backend)</a>
+* <a href="https://github.com/yuvraj24/WhatsApp-Clone/blob/master/app-client/README.md">Mobile App Client (Android & IOS)</a>
+* <a href="https://github.com/yuvraj24/WhatsApp-Clone/blob/master/web-client/README.md">Web App Client (WhatsApp Clone Web)</a>
+* <a href="https://github.com/yuvraj24/WhatsApp-Clone/blob/master/web-server/README.md">Web Server (Backend)</a>
 
 ## Platform Screenshots 🏞️
 Refer the following links for platform specific screenshots,
