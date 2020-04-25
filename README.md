@@ -1,4 +1,4 @@
-# WhatsApp Clone ⚡⚡
+# WhatsApp Clone ⚡
 
 ![Platform - Android, IOS and Web](https://img.shields.io/badge/platform-Android%20%7C%20IOS%20%7C%20Web-green.svg) 
 
@@ -15,6 +15,8 @@ You can see the following features in action in this repository,
 * *Multiple Status view along with progress*
 * *Web Login via QR code scan*
 
+If you like the work then don't forget to hit that ⭐ button to show some appreciation & love for this project as your token of love does wonders.
+
 ## Spread Your ❤️
 [![GitHub followers](https://img.shields.io/github/followers/yuvraj24.svg?style=social&label=Follow)](https://github.com/yuvraj24)  [![Twitter Follow](https://img.shields.io/twitter/follow/yuvrajpy24.svg?style=social)](https://twitter.com/yuvrajpy24)
 <br>
@@ -23,9 +25,9 @@ You can see the following features in action in this repository,
 Refer the following links for platform specific implementation,
 * <a href="">Mobile App Client (Android & IOS)</a>
 * <a href="">Web App Client (WhatsApp Web)</a>
-* <a href="">Web Server (Backend)</a>
+* <a href="https://github.com/yuvraj24/WhatsApp-Clone/tree/master/web-server">Web Server (Backend)</a>
 
-## About Me
+## Author  ✍️
 
 ### *Yuvraj Pandey*
 *I am a passionate Engineer which likes to push himself on various fronts of technologies.*  
