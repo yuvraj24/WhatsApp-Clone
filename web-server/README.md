@@ -16,10 +16,11 @@ Following are the technologies used in order to construct this backend,
 
 ### Install Dependencies
 ```js
-npm install express cors mongoose nodemon typescript config jsonwebtoken moment ts-node
+npm install express cors mongoose nodemon typescript config moment ts-node
 ```
 
 ### Install MongoDb
+MongoDB is a general purpose, document-based, distributed database built for modern application developers. MongoDB is a document database, which means it stores data in JSON-like documents.
 ```
 $ brew tap mongodb/brew
 $ brew install mongodb-community
@@ -33,11 +34,11 @@ $ brew tap mongodb/brew
 $ brew install mongodb-community
 $ brew services start mongodb-community
 ```
-For Windows Installation *<a href="https://docs.mongodb.com/manual/administration/install-community/" target="_blank">click here</a>*
+For windows installation *<a href="https://docs.mongodb.com/manual/administration/install-community/" target="_blank">click here</a>*.
 
 
 ### Install Socket.io
-Socket.IO enables real-time bidirectional event-based communication which is used here for realtime chat functionality.
+Socket.IO enables real-time bidirectional event-based communication which is used here for realtime transmission of data across all the active users.
 ```js
 npm install socket.io
 ```
@@ -61,9 +62,10 @@ npm install jsonwebtoken
 ```
 Check out their <a href="https://github.com/auth0/node-jsonwebtoken">Github Link</a> for more information.
 
-### Start Server
+## Start Server
+Once the installation is completed as highlighted above you can now move on to start the server & experience the magic yourself.
 ```js
-cd server
+cd web-server
 nodemon start
 ```
 
