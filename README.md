@@ -2,7 +2,7 @@
 
 ![Platform - Android, IOS and Web](https://img.shields.io/badge/platform-Android%20%7C%20IOS%20%7C%20Web-green.svg) 
 
-![](assets/WHClone3.png)
+![](assets/WHClone1.jpg)
 
 Whatsapp Clone provides an in depth view of implementation on how to create a full-stack, mobile, hybrid web application from scratch. This repository covers implementation of 3 major platform's mainly Android, IOS & Web using React Native & MERN stack 🔥.
 
