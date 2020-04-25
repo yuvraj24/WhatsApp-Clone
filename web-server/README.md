@@ -74,6 +74,12 @@ cd web-server
 nodemon start
 ```
 
+## Other Platforms
+Refer the following links for platform specific implementation,
+* <a href="">Mobile App Client (Android & IOS)</a>
+* <a href="">Web App Client (WhatsApp Web)</a>
+
+
 ## Author  ✍️
 ### *Yuvraj Pandey*
 *I am a passionate Engineer which likes to push himself on various fronts of technologies.*  
