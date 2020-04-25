@@ -9,7 +9,7 @@ Following are the main technologies used in order to construct this frontend,
 * <a href="https://github.com/axios/axios">Axios</a>
 * <a href="https://socket.io/">Socket.io-client</a><br> 
 
-## Live Action 💥
+## Live Action 🌏
 Visit the following website for live action of Whatsapp Clone Web
 
 <a href="https://whatsappclone-614cb.web.app/">WhatsApp Clone Web</a>
