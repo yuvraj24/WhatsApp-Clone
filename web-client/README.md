@@ -37,6 +37,8 @@ Firebase Hosting allows fast and secure hosting for our web application, static 
 
 Firebase Hosting, by default, provides an SSL certificate and offers an impressive speed across several geographical locations without any requirement for a separate CDN on top
 
+*The Web Application has been deployed via Firebase Hosting*
+
 * <a href="https://firebase.google.com/docs/hosting/use-cases">What can I do with Firebase Hosting?</a>
 * <a href="https://firebase.google.com/docs/cli">Website Deployment steps</a>
 
