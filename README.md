@@ -23,8 +23,8 @@ If you like the work then don't forget to hit that ⭐ button to show some appre
 
 ## Platform Support
 Refer the following links for platform specific implementation,
-* <a href="">Mobile App Client (Android & IOS)</a>
-* <a href="">Web App Client (WhatsApp Web)</a>
+* <a href="https://github.com/yuvraj24/WhatsApp-Clone/edit/master/app-client">Mobile App Client (Android & IOS)</a>
+* <a href="https://github.com/yuvraj24/WhatsApp-Clone/edit/master/web-client">Web App Client (WhatsApp Web)</a>
 * <a href="https://github.com/yuvraj24/WhatsApp-Clone/tree/master/web-server">Web Server (Backend)</a>
 
 ## Author  ✍️
