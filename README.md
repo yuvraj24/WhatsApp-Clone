@@ -14,6 +14,7 @@ You can see the following features in action in this repository,
 * *Realtime Status update*
 * *Multiple Status view along with progress*
 * *Web Login via QR code scan*
+* *WhatsApp Web with realtime chat & status*
 
 **If you like the work then don't forget to hit that ⭐ button to show some appreciation & love for this project as your token of love does wonders.**
 
@@ -42,6 +43,10 @@ Donwload the Android apk from the link below for live experience of this app.<br
 ### Website 🌏
 Visit the following website for live action of Whatsapp Clone Web<br>
 <a href="https://whatsappclone-614cb.web.app/">WhatsApp Clone Web</a>
+
+### WhatsApp Status Library ✨
+For displaying WhatsApp status like view you can check out the below npm with great extent of customisation & flexibility.<br>
+<a href="https://github.com/yuvraj24/react-native-stories-view">React Native Stories View</a>
 
 ## Author  ✍️
 
