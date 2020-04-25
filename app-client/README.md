@@ -19,8 +19,8 @@ Donwload the Android apk from the link below for live experience of this app.
 
 ## Other Platforms ✨
 Refer the following links for platform specific implementation,
-* <a href="https://github.com/yuvraj24/WhatsApp-Clone/tree/master/web-client">Web Client (WhatsApp Web)</a>
-* <a href="https://github.com/yuvraj24/WhatsApp-Clone/tree/master/web-server">Web Server (Backend)</a>
+* <a href="https://github.com/yuvraj24/WhatsApp-Clone/blob/master/web-client/README.md">Web Client (WhatsApp Web)</a>
+* <a href="https://github.com/yuvraj24/WhatsApp-Clone/blob/master/web-server/README.md">Web Server (Backend)</a>
 
 ## Screenshots : IOS
 
