@@ -16,14 +16,14 @@ import {
   chatListReducer,
   CHAT_LIST,
   CHAT_ITEM,
-  REFRESH
+  REFRESH,
 } from "./WebChatListReducer";
 // import { makeStyles } from "@material-ui/core/styles";
 
 var socket = getSocket();
 const cache = new CellMeasurerCache({
   fixedWidth: true,
-  defaultHeight: 60
+  defaultHeight: 60,
 });
 
 const WebChatListView = ({ onItemClick, userChatList }) => {
@@ -57,15 +57,15 @@ const WebChatListView = ({ onItemClick, userChatList }) => {
   const getLatestChats = () => {
     getUserId();
     getChatList()
-      .then(res => {
+      .then((res) => {
         // console.log("LIST RESPONSE => " + JSON.stringify(res.data.data));
         if (res.status === 200) {
-          userChatList(res.data.data)
+          userChatList(res.data.data);
           dispatch({ type: CHAT_LIST, payload: res.data.data });
         }
         dispatch({ type: REFRESH, payload: false });
       })
-      .catch(error => {
+      .catch((error) => {
         console.log("ERROR ", error);
       });
   };
@@ -74,10 +74,11 @@ const WebChatListView = ({ onItemClick, userChatList }) => {
     let chatArray = chatList;
     console.log("Message CHAT Received => ", JSON.stringify(chatItem));
 
+    var isMatch = false;
     if (chatArray.length > 0) {
       for (let i = 0; i < chatArray.length; i++) {
         const element = chatArray[i];
-        if (element.roomId === chatItem.roomId) {
+        if (chatItem && element.roomId === chatItem.roomId) {
           // Increment unread count
           chatItem = await calcUnreadCount(chatItem, element.chatUnreadCount);
 
@@ -87,9 +88,23 @@ const WebChatListView = ({ onItemClick, userChatList }) => {
           // }
           console.log("Selected Chat Received => ", JSON.stringify(chatItem));
           chatArray[i] = chatItem;
+          isMatch = true;
           break;
         }
       }
+
+      if (!isMatch && chatItem.chatUnreadCount.type != 'reset') {
+        // Increment unread count
+        chatItem = await calcUnreadCount(chatItem, 0);
+
+        // Since chat item received is an object to convert it to array and they re initialise
+        // if (chatItem.chat.length <= 0) {
+        chatItem.chat = [chatItem.chat];
+        // }
+        console.log("Selected Chat Received => ", JSON.stringify(chatItem));
+        chatArray.push(chatItem);
+      }
+
       console.log("Message CHAT AFTER Received => ", JSON.stringify(chatItem));
 
       dispatch({ type: CHAT_LIST, payload: chatArray });
@@ -107,7 +122,7 @@ const WebChatListView = ({ onItemClick, userChatList }) => {
 
   function listenSocket() {
     // socket.removeListener(webConstants.CHAT_LIST);
-    socket.on(webConstants.CHAT_LIST, chatItem => {
+    socket.on(webConstants.CHAT_LIST, (chatItem) => {
       dispatch({ type: CHAT_ITEM, payload: chatItem });
     });
   }
@@ -136,7 +151,7 @@ const WebChatListView = ({ onItemClick, userChatList }) => {
         flex: 1,
         width: "100%",
         borderRadius: 0,
-        backgroundColor: WHITE
+        backgroundColor: WHITE,
       }}
     >
       {chatList.length === 0 && (
@@ -147,7 +162,7 @@ const WebChatListView = ({ onItemClick, userChatList }) => {
         style={{
           height: "100%",
           width: "100%",
-          outline: "none"
+          outline: "none",
         }}
         rowCount={chatList.length}
         height={window.innerHeight}

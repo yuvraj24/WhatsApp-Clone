@@ -49,6 +49,7 @@ const ScanCodeView = ({ params }) => {
 
   return (
     <html>
+      <title>WhatsApp Clone Web</title>
       <head>
         <link
           rel="stylesheet"
@@ -71,16 +72,16 @@ const ScanCodeView = ({ params }) => {
             <Button
               startIcon={<Icon style={{ fontSize: 40 }} />}
               style={{ marginTop: "2%", color: WHITE }}
-              onClick={() => {
-                window.location.hash = "/chat";
-              }}
+              // onClick={() => {
+              //   window.location.hash = "/chat";
+              // }}
             >
               <Typography
                 variant={"button"}
                 component={"tbody"}
                 style={{ fontSize: 18 }}
               >
-                WhatsApp Web
+                WhatsApp Clone Web
               </Typography>
             </Button>
           </div>
@@ -100,14 +101,14 @@ const ScanCodeView = ({ params }) => {
                     component={"h4"}
                     style={{ marginBottom: "5%" }}
                   >
-                    To use WhatsApp on your compulter :
+                    To use WhatsApp Clone on your computer :
                   </Typography>
                   <Typography
                     variant={"h5"}
                     component={"body"}
                     className={classes.textPointsStyle}
                   >
-                    1. Open WhatsApp on your phone
+                    1. Open WhatsApp Clone on your phone
                   </Typography>
                   <Typography
                     variant={"h5"}

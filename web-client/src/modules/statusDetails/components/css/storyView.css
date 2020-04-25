@@ -18,6 +18,6 @@
   right: 25%; 
   position: absolute;
   image-orientation: from-image;
-  transform: rotate(90deg);
+  /* transform: rotate(90deg); */
   /* object-fit: cover; */
 }

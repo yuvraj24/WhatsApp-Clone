@@ -65,7 +65,7 @@ const TabView = ({navigation}) => (
         <StatusView navigation={navigation} />
       </Tab>
 
-      <Tab
+      {/* <Tab
         heading={
           <TabHeading style={styles.tabStyle}>
             <Text uppercase style={styles.tabTextStyle}>
@@ -74,7 +74,7 @@ const TabView = ({navigation}) => (
           </TabHeading>
         }>
         <CallsView />
-      </Tab>
+      </Tab> */}
     </Tabs>
   </Container>
 );

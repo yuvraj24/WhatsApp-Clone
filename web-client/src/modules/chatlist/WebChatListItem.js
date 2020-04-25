@@ -170,7 +170,8 @@ export default WebChatListItem;
 
 const useStyles = makeStyles(theme => ({
   root: {
-    width: "100%"
+    width: "100%",
+    fontFamily:'Roboto'
   },
   parentDiv: {
     height: 0.3,
@@ -184,6 +185,7 @@ const useStyles = makeStyles(theme => ({
     display: "flex",
     marginLeft: "auto",
     marginRight: 0, 
+    fontFamily:'Roboto'
   },
   inline: {
     display: "inline"
@@ -207,8 +209,8 @@ const useStyles = makeStyles(theme => ({
     alignSelf: "flex-start",
     textOverflow: "ellipsis",
     overflow: "hidden",
-    whiteSpace: "nowrap",
-    fontWeight: 500
+    whiteSpace: "nowrap", 
+    fontFamily:'Roboto'
   },
   userTime: {
     fontSize: 12,

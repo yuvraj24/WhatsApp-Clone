@@ -32,7 +32,7 @@ const WebZoneStatusComponent = ({ statusData, onCancelClick, dispatch }) => {
       >
         {"View your updates"}
       </p>
-      <div style={{ display: "flex", flexDirection: "row", width: '100%' }}>
+      <div style={{ display: "flex", flexDirection: "row", width: '100%', justifyContent: 'center' }}>
         {statusData.status.map((value, index) => {
           return (
             <div

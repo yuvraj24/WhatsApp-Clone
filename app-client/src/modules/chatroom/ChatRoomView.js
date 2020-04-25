@@ -1,7 +1,7 @@
 import React, {useMemo, useState, useRef, useEffect} from 'react';
 import {Text, View, FlatList, SafeAreaView} from 'react-native';
 import _Divider from '../../components/_Divider';
- 
+
 import ChatRoomLeftItem from './ChatRoomLeftItem';
 import ChatRoomRightItem from './ChatRoomRightItem';
 import constants from '../../utils/constants';
@@ -27,6 +27,7 @@ const ChatRoomView = ({chatItem, navigation, isNewChat}) => {
   const [userId, setUserId] = useState('');
   const [refresh, setRefresh] = useState(false);
   const [roomId, setRoomId] = useState('');
+  const [roomChatItem, setRoomChatItem] = useState('');
   const flatList = useRef();
 
   useEffect(() => {
@@ -35,51 +36,63 @@ const ChatRoomView = ({chatItem, navigation, isNewChat}) => {
   }, []);
 
   useEffect(() => {
-    let req = {
-      roomId: chatItem.roomId,
-      userId: userId,
-    };
-    getChatRoom(req)
-      .then(res => {
-        // console.log('RESPONSE => ' + JSON.stringify(res.data));
-        if (res.status === 200 && res.data && res.data.data.length > 0) {
-          var chatArray = res.data.data[0].chat;
-          chatArray.reverse();
-          setChatRoomList(chatArray);
-          listenSocket(chatArray);
-        }
-      })
-      .catch(error => {
-        console.log('ERROR ', error);
-      });
+    if (userId != '') {
+      let req = {
+        roomId: chatItem.roomId,
+        userId: userId,
+      };
+      getChatRoom(req)
+        .then(res => {
+          // console.log('RESPONSE => ' + JSON.stringify(res.data));
+          if (res.status === 200 && res.data && res.data.data.length > 0) {
+            var chatArray = res.data.data[0].chat;
+            chatArray.reverse();
+            setChatRoomList(chatArray); 
+          }
+        })
+        .catch(error => {
+          console.log('ERROR ', error);
+        });
+    }
   }, [userId]);
+
+  useEffect(() => {
+    // console.log('Chat List Changed == ', JSON.stringify(chatList));
+    if (roomChatItem != '') {
+      renderChats();
+    }
+  }, [roomChatItem]);
 
   async function getUser() {
     const userId = await getLocalData(constants.USER_ID);
     setUserId(userId);
   }
 
-  function listenSocket(chatArray) {
+  function listenSocket() {
     socket.removeAllListeners();
     socket.on(constants.CHAT_ROOM, message => {
-      console.log('Message Received => ', JSON.stringify(message));
-
-      // If message received invloves user then only add to list else ignore
-      if (message.userId === userId || message.chatId === userId) {
-        setRefresh(true);
-        if (!chatArray) {
-          chatArray = [];
-        }
-        chatArray.reverse();
-        chatArray.push(message.chat);
-        chatArray.reverse();
-        // console.log('USER ID => ', userId);
-        setChatRoomList(chatArray);
-        setTimeout(() => {
-          setRefresh(false);
-        }, 1000);
-      }
+      console.log('Message Received => ', JSON.stringify(message)); 
+      setRoomChatItem(message)
     });
+  }
+
+  function renderChats() {
+    let chatArray = chatRoomList;
+    // If message received invloves user then only add to list else ignore
+    if (roomChatItem.userId === userId || roomChatItem.chatId === userId) {
+      setRefresh(true);
+      if (!chatArray) {
+        chatArray = [];
+      }
+      chatArray.reverse();
+      chatArray.push(roomChatItem.chat);
+      chatArray.reverse();
+      // console.log('USER ID => ', userId);
+      setChatRoomList(chatArray);
+      setTimeout(() => {
+        setRefresh(false);
+      }, 1000);
+    }
   }
 
   const onSendMessage = text => {
@@ -129,7 +142,7 @@ const ChatRoomView = ({chatItem, navigation, isNewChat}) => {
   };
 
   return (
-    <SafeAreaView  style={{flex: 1}}>
+    <SafeAreaView style={{flex: 1}}>
       <View style={{flex: 1, paddingTop: 4}}>
         <FlatList
           ref={flatList}

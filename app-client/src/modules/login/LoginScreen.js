@@ -7,6 +7,7 @@ import {
   AsyncStorage,
   TextInput,
   KeyboardAvoidingView,
+  Platform,
 } from 'react-native';
 import {DEFAULT_STYLES} from '../../utils/styles';
 import {
@@ -59,7 +60,7 @@ var {
 const LoginScreen = ({navigation}) => {
   const [userName, setUserName] = useState('');
   const [mobile, setMobile] = useState('');
-  const [isLoading, setLoading] = useState(false); 
+  const [isLoading, setLoading] = useState(false);
 
   useEffect(() => {
     getLocalData(constants.USER_ID)
@@ -109,11 +110,13 @@ const LoginScreen = ({navigation}) => {
   };
 
   return (
-    <Root style={[container, {flexDirection: 'column'}]}>
-      <SafeAreaView style={container}>
-        {isLoading && <LoadingComponent />}
-        {/* {!isLoading && ( */}
-        <KeyboardAvoidingView behavior="padding" style={styles.keyboardView}>
+    <SafeAreaView style={container}>
+      {isLoading && <LoadingComponent />}
+      {/* {!isLoading && ( */}
+      <Root style={[container, {flexDirection: 'column'}]}>
+        <KeyboardAvoidingView
+          behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+          style={styles.keyboardView}>
           <View style={styles.headerView}>
             <Icon type="FontAwesome" name="whatsapp" style={styles.logoStyle} />
             <_Text style={styles.logoTextStyle}>{constants.APP_NAME}</_Text>
@@ -170,9 +173,9 @@ const LoginScreen = ({navigation}) => {
             </View>
           </ScrollView>
         </KeyboardAvoidingView>
-        {/* )} */}
-      </SafeAreaView>
-    </Root>
+      </Root>
+      {/* )} */}
+    </SafeAreaView>
   );
 };
 

@@ -63,7 +63,7 @@ const HomeHeader = ({navigation}) => {
       {/* <View style={styles.parentView}> */}
       {/* <Image source={prodileImage} style={styles.imageRounded} /> */}
       <_Text title style={styles.userName}>
-        WhatsApp
+        WhatsApp Clone
       </_Text>
       {/* </View> */}
       <View style={styles.parentView}>

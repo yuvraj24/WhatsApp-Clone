@@ -7,14 +7,14 @@ import ChatTextInput from "./WebChatTextInput";
 import {
   getChatRoom,
   createChatRoom,
-  updateChatRoom
+  updateChatRoom,
 } from "../../api/webApiController";
 import moment from "moment";
 import {
   getLocalData,
   getUserType,
   getUserTypeChatRoom,
-  getSocket
+  getSocket,
 } from "../../utils/webHelperFunctions";
 import { List, CellMeasurer, CellMeasurerCache } from "react-virtualized";
 import WhatsapBG from "../../assets/images/WhatsappBG.png";
@@ -35,7 +35,7 @@ const ChatRoomView = ({ chatItem, isNewChat }) => {
 
   const cache = new CellMeasurerCache({
     fixedWidth: true,
-    defaultHeight: 80
+    defaultHeight: 80,
   });
 
   // This side effect is for refreshing socket data
@@ -56,6 +56,7 @@ const ChatRoomView = ({ chatItem, isNewChat }) => {
   // This side effect is for geting userid first
   useEffect(() => {
     getUser();
+    listenSocket([]);
   }, [refresh]);
 
   // When user id is retrived this side effect is invoked
@@ -66,21 +67,20 @@ const ChatRoomView = ({ chatItem, isNewChat }) => {
   function fetchChatRoomMessages() {
     let req = {
       roomId: chatItem.roomId,
-      userId: userId
+      userId: userId,
     };
     getChatRoom(req)
-      .then(res => {
+      .then((res) => {
         // console.log('RESPONSE => ' + JSON.stringify(res.data));
         if (res.status === 200 && res.data && res.data.data.length > 0) {
           var chatArray = res.data.data[0].chat;
           // chatArray.reverse(); // In case of web reverse is not required
           setChatRoomList(chatArray);
-          listenSocket(chatArray);
         } else {
           setChatRoomList([]);
         }
       })
-      .catch(error => {
+      .catch((error) => {
         console.log("ERROR ", error);
         setChatRoomList([]);
       });
@@ -91,9 +91,9 @@ const ChatRoomView = ({ chatItem, isNewChat }) => {
     setUserId(userId);
   }
 
-  function listenSocket(chatArray) {
+  function listenSocket() {
     socket.removeListener(webConstants.CHAT_ROOM);
-    socket.on(webConstants.CHAT_ROOM, message => {
+    socket.on(webConstants.CHAT_ROOM, (message) => {
       console.log("Message ROOM Received => ", JSON.stringify(message));
       setMessage(message);
     });
@@ -128,7 +128,7 @@ const ChatRoomView = ({ chatItem, isNewChat }) => {
     }, 1500);
   }
 
-  const onSendMessage = text => {
+  const onSendMessage = (text) => {
     if (text != "") {
       // var chatId = chatItem.chatId;
       // if (isNewChat) {
@@ -173,7 +173,7 @@ const ChatRoomView = ({ chatItem, isNewChat }) => {
       chatRequest.chatUnreadCount = {
         userId: userId,
         type: "add",
-        count: 1
+        count: 1,
       };
 
       if (chatRequest.roomId === "") {
@@ -184,7 +184,7 @@ const ChatRoomView = ({ chatItem, isNewChat }) => {
         ? createChatRoom(chatRequest)
         : updateChatRoom(chatRequest);
       res
-        .then(res => {
+        .then((res) => {
           console.log("CHAT ROOM RESPONSE=> ", JSON.stringify(res));
           chatRequest.roomId = res.data.id;
           setRoomId(chatRequest.roomId);
@@ -197,7 +197,7 @@ const ChatRoomView = ({ chatItem, isNewChat }) => {
           // };
           socket.emit(webConstants.CHAT_LIST, chatRequest);
         })
-        .catch(err => {
+        .catch((err) => {
           console.log("CHAT ROOM ERROR => ", JSON.stringify(err));
         });
     }
@@ -206,10 +206,12 @@ const ChatRoomView = ({ chatItem, isNewChat }) => {
   function modifyRowHeight(event) {
     if (event.target.value != "") {
       setHeight(inputRef.current.clientHeight);
-      setTimeout(() => {
-        flatList.current.measureAllRows();
-      }, 1000);
-      flatList.current.scrollToRow(chatRoomList.length);
+      if (chatRoomList.length > 0) {
+        setTimeout(() => {
+          flatList.current.measureAllRows();
+        }, 1500);
+        flatList.current.scrollToRow(chatRoomList.length);
+      }
     } else {
       setTimeout(() => {
         setHeight(inputRef.current.clientHeight);
@@ -260,7 +262,7 @@ const ChatRoomView = ({ chatItem, isNewChat }) => {
         flexDirection: "column",
         width: "100%",
         background: "url(" + WhatsapBG + ")",
-        height: "92%"
+        height: "92%",
       }}
     >
       <div
@@ -268,7 +270,7 @@ const ChatRoomView = ({ chatItem, isNewChat }) => {
           backgroundColor: "#E4DDD6",
           height: "100%",
           zIndex: "100",
-          opacity: "0.95"
+          opacity: "0.95",
         }}
       />
 
@@ -284,7 +286,7 @@ const ChatRoomView = ({ chatItem, isNewChat }) => {
           position: "absolute",
           zIndex: "1000",
           height: "92%",
-          width: "70%"
+          width: "70%",
         }}
       >
         <List
@@ -294,7 +296,7 @@ const ChatRoomView = ({ chatItem, isNewChat }) => {
             width: "100%",
             outline: "none",
             paddingBottom: height === "" ? 80 : height,
-            paddingTop: 10
+            paddingTop: 10,
           }}
           rowCount={chatRoomList.length}
           height={window.innerHeight - 120}
@@ -318,12 +320,12 @@ const ChatRoomView = ({ chatItem, isNewChat }) => {
           bottom: 0,
           maxHeight: 160,
           minHeight: 60,
-          overflow: "hidden"
+          overflow: "hidden",
         }}
       >
         <ChatTextInput
-          onSendMessage={text => onSendMessage(text)}
-          onTyping={event => {
+          onSendMessage={(text) => onSendMessage(text)}
+          onTyping={(event) => {
             modifyRowHeight(event);
           }}
         />

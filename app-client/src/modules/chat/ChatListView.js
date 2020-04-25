@@ -76,37 +76,52 @@ const ChatListView = ({navigation}) => {
       });
   };
 
-  function renderChats() {
+  async function renderChats() {
     let chatArray = chatList;
-    console.log('Message CHAT Received => ', JSON.stringify(chatItem));
+    console.log("Message CHAT Received => ", JSON.stringify(chatItem));
 
+    var isMatch = false;
     if (chatArray.length > 0) {
       for (let i = 0; i < chatArray.length; i++) {
         const element = chatArray[i];
-        if (element.roomId === chatItem.roomId) {
+        if (chatItem && element.roomId === chatItem.roomId) {
           // Increment unread count
-          chatItem = calcUnreadCount(chatItem, element.chatUnreadCount);
+          chatItem = await calcUnreadCount(chatItem, element.chatUnreadCount);
 
           // Since chat item received is an object to convert it to array and they re initialise
           // if (chatItem.chat.length <= 0) {
           chatItem.chat = [chatItem.chat];
           // }
-          console.log('Selected Chat Received => ', JSON.stringify(chatItem));
+          console.log("Selected Chat Received => ", JSON.stringify(chatItem));
           chatArray[i] = chatItem;
+          isMatch = true;
           break;
         }
       }
-      console.log('Message CHAT AFTER Received => ', JSON.stringify(chatItem));
 
-      dispatch({type: CHAT_LIST, payload: chatArray});
+      if (!isMatch && chatItem.chatUnreadCount.type != 'reset') {
+        // Increment unread count
+        chatItem = await calcUnreadCount(chatItem, 0);
+
+        // Since chat item received is an object to convert it to array and they re initialise
+        // if (chatItem.chat.length <= 0) {
+        chatItem.chat = [chatItem.chat];
+        // }
+        console.log("Selected Chat Received => ", JSON.stringify(chatItem));
+        chatArray.push(chatItem);
+      }
+
+      console.log("Message CHAT AFTER Received => ", JSON.stringify(chatItem));
+
+      dispatch({ type: CHAT_LIST, payload: chatArray });
       console.log(
         `FINAL CHAT ARRAY ${refresh} => `,
-        'JSON.stringify(chatArray)',
+        "JSON.stringify(chatArray)"
       );
     } else {
       // For new chat
-      if (chatItem.chatUnreadCount.type === 'add') {
-        dispatch({type: REFRESH, payload: true});
+      if (chatItem.chatUnreadCount.type === "add") {
+        dispatch({ type: REFRESH, payload: true });
       }
     }
   }

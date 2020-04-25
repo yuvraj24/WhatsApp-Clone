@@ -12,6 +12,7 @@ import LoadingComponent from '../../components/LoadingComponent';
 import CameraView from '../../components/CameraView';
 import {StackActions} from '@react-navigation/native';
 import {NAV_TYPES} from '../../utils/navTypes';
+import {TouchableOpacity} from 'react-native-gesture-handler';
 
 var socket = getSocket();
 var isValid = true;
@@ -31,9 +32,9 @@ const QrCodeAppScanner = ({navigation}) => {
         isValid = false;
         navigation.dispatch(StackActions.replace(NAV_TYPES.HOME_SCREEN));
       }
-      setTimeout(function(){
-        isValid = true
-      }, 1500)
+      setTimeout(function() {
+        isValid = true;
+      }, 1500);
     } catch (error) {
       console.log(error);
     }
@@ -42,6 +43,9 @@ const QrCodeAppScanner = ({navigation}) => {
   return (
     <Root>
       <SafeAreaView style={styles.container}>
+        {/* <TouchableOpacity onPress={() => onScanQrCode()}>
+          <Text>CONNECT</Text>
+        </TouchableOpacity>  */}
         <View style={styles.container}>
           <CameraView
             navigation={navigation}

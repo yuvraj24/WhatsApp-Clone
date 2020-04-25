@@ -1,7 +1,7 @@
 export const webConstants = {
   API: {
-    // SERVER_URL: "http://localhost:3000/api",
-    // SOCKET_URL: "http://localhost:3000/", 
+// SERVER_URL: "http://localhost:3000/api",
+//     SOCKET_URL: "http://localhost:3000/", 
 
     SERVER_URL: "https://watsappclone.herokuapp.com/api",
     SOCKET_URL: "https://watsappclone.herokuapp.com/", 
