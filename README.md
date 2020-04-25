@@ -15,17 +15,33 @@ You can see the following features in action in this repository,
 * *Multiple Status view along with progress*
 * *Web Login via QR code scan*
 
-If you like the work then don't forget to hit that ⭐ button to show some appreciation & love for this project as your token of love does wonders.
+**If you like the work then don't forget to hit that ⭐ button to show some appreciation & love for this project as your token of love does wonders.**
 
 ## Spread Your ❤️
 [![GitHub followers](https://img.shields.io/github/followers/yuvraj24.svg?style=social&label=Follow)](https://github.com/yuvraj24)  [![Twitter Follow](https://img.shields.io/twitter/follow/yuvrajpy24.svg?style=social)](https://twitter.com/yuvrajpy24)
 <br>
 
-## Platform Support
+## Platform Support ✨
 Refer the following links for platform specific implementation,
 * <a href="https://github.com/yuvraj24/WhatsApp-Clone/edit/master/app-client">Mobile App Client (Android & IOS)</a>
 * <a href="https://github.com/yuvraj24/WhatsApp-Clone/edit/master/web-client">Web App Client (WhatsApp Web)</a>
 * <a href="https://github.com/yuvraj24/WhatsApp-Clone/tree/master/web-server">Web Server (Backend)</a>
+
+## Platform Screenshots 🏞️
+Refer the following links for platform specific screenshots,
+* <a href="https://github.com/yuvraj24/WhatsApp-Clone/blob/master/app-client/README.md#screenshots--ios">Android</a>
+* <a href="https://github.com/yuvraj24/WhatsApp-Clone/blob/master/app-client/README.md#screenshots--android">IOS</a>
+* <a href="https://github.com/yuvraj24/WhatsApp-Clone/tree/master/web-client#screenshot">Website</a>
+
+## Live Action ⚡
+
+### Mobile App 📱
+Donwload the Android apk from the link below for live experience of this app.<br>
+<a href="https://github.com/yuvraj24/WhatsApp-Clone/blob/master/assets/WHClone_android_v1.apk">WhatsApp Clone : Android</a>
+
+### Website 🌏
+Visit the following website for live action of Whatsapp Clone Web<br>
+<a href="https://whatsappclone-614cb.web.app/">WhatsApp Clone Web</a>
 
 ## Author  ✍️
 
