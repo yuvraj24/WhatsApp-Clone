@@ -19,6 +19,8 @@ Refer the following links for platform specific implementation,
 ## Heroku Deployment 🔥
 Heroku runs the customer's apps in virtual containers which execute on a reliable runtime environment. Heroku calls these containers "Dynos." These Dynos can run code written in Node, Ruby, PHP, Go, Scala, Python, Java, or Clojure. Heroku also provides custom buildpacks with which the developer can deploy apps in any other language. Heroku lets the developer scale the app instantly just by either increasing the number of dynos or by changing the type of dyno the app runs in.
 
+*The Backend code has been deployed & made live via Heroku*
+
 * <a href="https://devcenter.heroku.com/articles/how-heroku-works">Check how Heroku works</a>
 * <a href="https://devcenter.heroku.com/categories/deployment">Platform specific deployment</a>
 
