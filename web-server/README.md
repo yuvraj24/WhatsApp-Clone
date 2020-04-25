@@ -11,6 +11,11 @@ Following are the technologies used in order to construct this backend,
 * <a href="https://www.typescriptlang.org/">Typescript</a>
 * <a href="https://github.com/auth0/node-jsonwebtoken">JSON WebToken</a>
 
+## Other Platforms
+Refer the following links for platform specific implementation,
+* <a href="https://github.com/yuvraj24/WhatsApp-Clone/tree/master/app-client">Mobile App Client (Android & IOS)</a>
+* <a href="https://github.com/yuvraj24/WhatsApp-Clone/edit/master/web-client">Web App Client (WhatsApp Web)</a>
+
 ## Heroku Deployment 🔥
 Heroku runs the customer's apps in virtual containers which execute on a reliable runtime environment. Heroku calls these containers "Dynos." These Dynos can run code written in Node, Ruby, PHP, Go, Scala, Python, Java, or Clojure. Heroku also provides custom buildpacks with which the developer can deploy apps in any other language. Heroku lets the developer scale the app instantly just by either increasing the number of dynos or by changing the type of dyno the app runs in.
 
@@ -73,12 +78,6 @@ Once the installation is completed as highlighted above you can now move on to s
 cd web-server
 nodemon start
 ```
-
-## Other Platforms
-Refer the following links for platform specific implementation,
-* <a href="">Mobile App Client (Android & IOS)</a>
-* <a href="">Web App Client (WhatsApp Web)</a>
-
 
 ## Author  ✍️
 ### *Yuvraj Pandey*
