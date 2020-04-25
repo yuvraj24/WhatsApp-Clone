@@ -1,4 +1,4 @@
-# WhatsApp-Clone-Server
+# WhatsApp-Clone-Server ⭐
 
 The backend of an application is responsible for things like calculations, business logic, database interactions, and performance. Most of the code that is required to make an application work will be done on the backend.This part of the repository mainly deals with the server side implementation of the Whatsapp clone. 
 
@@ -11,13 +11,13 @@ Following are the technologies used in order to construct this backend,
 * <a href="https://www.typescriptlang.org/">Typescript</a>
 * <a href="https://github.com/auth0/node-jsonwebtoken">JSON WebToken</a>
 
-## Heroku Deployment
+## Heroku Deployment 🔥
 Heroku runs the customer's apps in virtual containers which execute on a reliable runtime environment. Heroku calls these containers "Dynos." These Dynos can run code written in Node, Ruby, PHP, Go, Scala, Python, Java, or Clojure. Heroku also provides custom buildpacks with which the developer can deploy apps in any other language. Heroku lets the developer scale the app instantly just by either increasing the number of dynos or by changing the type of dyno the app runs in.
 
 * <a href="https://devcenter.heroku.com/articles/how-heroku-works">Check how Heroku works</a>
 * <a href="https://devcenter.heroku.com/categories/deployment">Platform specific deployment</a>
 
-## Getting Started
+## Getting Started ✨
 
 ### Install Dependencies
 ```js
@@ -67,11 +67,17 @@ npm install jsonwebtoken
 ```
 Check out their <a href="https://github.com/auth0/node-jsonwebtoken">Github Link</a> for more information.
 
-## Start Server
+## Start Server ⚡
 Once the installation is completed as highlighted above you can now move on to start the server & experience the magic yourself.
 ```js
 cd web-server
 nodemon start
 ```
 
+## Author  ✍️
+### *Yuvraj Pandey*
+*I am a passionate Engineer which likes to push himself on various fronts of technologies.*  
 
+For more exciting updates follow me,
+
+<a href="https://twitter.com/yuvrajpy24" target="_blank"><img src="https://github.com/yuvraj24/LiveSmashBar/blob/master/images/twitter.png" width="40" height="40"></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.linkedin.com/in/yuvraj24" target="_blank"><img src="https://github.com/yuvraj24/LiveSmashBar/blob/master/images/linkedin.png" width="40" height="40"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/yuvraj24" target="_blank"><img src="https://github.com/yuvraj24/LiveSmashBar/blob/master/images/github.png" height="40"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://medium.com/@yuvrajpandey24" target="_blank"><img src="https://github.com/yuvraj24/LiveSmashBar/blob/master/images/medium.png" width="40" height="40"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://play.google.com/store/apps/developer?id=Yuvraj+Pandey"><img src="https://github.com/yuvraj24/LiveSmashBar/blob/master/images/playstore.png" width="40" height="40"></a>
