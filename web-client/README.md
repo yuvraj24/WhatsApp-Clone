@@ -9,7 +9,7 @@ Following are the main technologies used in order to construct this frontend,
 * <a href="https://github.com/axios/axios">Axios</a>
 * <a href="https://socket.io/">Socket.io-client</a><br> 
 
-## Firebase Hosting Deployment 🔥
+## Firebase Hosting 🔥
 Firebase Hosting allows fast and secure hosting for our web application, static and dynamic content, and microservices. It is production-grade web content hosting for the developers. We can easily and quickly deploy web apps and serve both static and dynamic content to a global content delivery network with only a single command. We can pair Firebase Hosting with Cloud Function for building and hosting microservices on Firebase. 
 
 Firebase Hosting, by default, provides an SSL certificate and offers an impressive speed across several geographical locations without any requirement for a separate CDN on top
@@ -19,7 +19,7 @@ Firebase Hosting, by default, provides an SSL certificate and offers an impressi
 
 ## Getting Started ✨
 
-This project follows the same steps as compared to Whatsapp web in order to access your chat. 
+This project follows the same steps as compared to Whatsapp web in order to access your chat information. 
 * The very first page of the project displays a Qr Code which you have to scan from your logged in mobile app.
 * On successfull completion of scan you will be redirected to the home page where in you can see your chats & status.
 
@@ -30,10 +30,11 @@ npm install
 ```
 
 ### Start Whatsapp Clone Web
-Runs the app in the development mode. Open http://localhost:3000 to view it in the browser.
+
 ```js
 npm start
 ```
+Runs the app in the development mode. Open http://localhost:3000 to view it in the browser.
 
 ```js
 npm test
