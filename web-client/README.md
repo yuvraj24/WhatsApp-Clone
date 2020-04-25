@@ -20,6 +20,17 @@ Refer the following links for platform specific implementation,
 * <a href="https://github.com/yuvraj24/WhatsApp-Clone/tree/master/app-client">Mobile App Client (Android & IOS)</a>
 * <a href="https://github.com/yuvraj24/WhatsApp-Clone/tree/master/web-server">Web Server (Backend)</a>
 
+## Screenshot
+<br>
+
+|          **Screens**                  |
+| :-----------------------------------: |
+| ![](../assets/wh_web1.png)            |<br>
+| <br> ![](../assets/wh_web4.png)            |<br>
+| <br> ![](../assets/wh_web2.png)            |<br>
+| <br> ![](../assets/wh_web6.png)            |<br>
+| <br> ![](../assets/wh_web7.png)            |<br>
+| <br> ![](../assets/wh_web8.png)            |<br>
 
 ## Firebase Hosting 🔥
 Firebase Hosting allows fast and secure hosting for our web application, static and dynamic content, and microservices. It is production-grade web content hosting for the developers. We can easily and quickly deploy web apps and serve both static and dynamic content to a global content delivery network with only a single command. We can pair Firebase Hosting with Cloud Function for building and hosting microservices on Firebase. 
