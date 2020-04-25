@@ -23,9 +23,9 @@ Refer the following links for platform specific implementation,
 ## Screenshot
 <br>
 
-| **Login** | **Register** | **Home** | **ChatRoom** |  **Menu**  |  **Status**   |  **Status View 1** | **Status View 2** |
-| :-----------: | :---------: | :----------: | :----------: | :------------: | :---------: | :----------: | :----------: |
-| ![](../master/assets/wh_ios4.png) | ![](../master/assets/wh_ios5.png) | ![](../master/assets/wh_ios1.png) | ![](../master/assets/wh_ios8.png) | ![](../master/assets/wh_ios3.png) | ![](../master/assets/wh_ios2.png)  | ![](../master/assets/wh_ios7.png)  | ![](../master/assets/wh_ios6.png)  |
+| **Login** | **Register** | **Home** | **ChatRoom** |  **Menu**  |  **Status**   |  **Status View** |
+| :-----------: | :---------: | :----------: | :----------: | :------------: | :---------: | :----------: |
+| ![](../assets/wh_ios4.png) | ![](../assets/wh_ios5.png) | ![](../assets/wh_ios1.png) | ![](../assets/wh_ios8.png) | ![](../assets/wh_ios3.png) | ![](../assets/wh_ios2.png)  | ![](../assets/wh_ios7.png) |
 
 ## Firebase Hosting 🔥
 Firebase Hosting allows fast and secure hosting for our web application, static and dynamic content, and microservices. It is production-grade web content hosting for the developers. We can easily and quickly deploy web apps and serve both static and dynamic content to a global content delivery network with only a single command. We can pair Firebase Hosting with Cloud Function for building and hosting microservices on Firebase. 
