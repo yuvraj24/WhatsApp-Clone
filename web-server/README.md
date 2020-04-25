@@ -11,7 +11,7 @@ Following are the technologies used in order to construct this backend,
 * <a href="https://www.typescriptlang.org/">Typescript</a>
 * <a href="https://github.com/auth0/node-jsonwebtoken">JSON WebToken</a>
 
-## Other Platforms
+## Other Platforms ✨
 Refer the following links for platform specific implementation,
 * <a href="https://github.com/yuvraj24/WhatsApp-Clone/tree/master/app-client">Mobile App Client (Android & IOS)</a>
 * <a href="https://github.com/yuvraj24/WhatsApp-Clone/edit/master/web-client">Web App Client (WhatsApp Web)</a>
@@ -23,6 +23,13 @@ Heroku runs the customer's apps in virtual containers which execute on a reliabl
 
 * <a href="https://devcenter.heroku.com/articles/how-heroku-works">Check how Heroku works</a>
 * <a href="https://devcenter.heroku.com/categories/deployment">Platform specific deployment</a>
+
+## MongoDb Deployment (mLab) 🔥
+mLab is a fully managed cloud database service that hosts MongoDB databases. mLab runs on cloud providers Amazon, Google, and Microsoft Azure, and has partnered with platform-as-a-service providers.
+
+*The MongoDb databse code has been deployed & made live on mLab*
+
+* <a href="https://docs.mlab.com/">Quick-Start Guide to mLab</a> 
 
 ## Getting Started ✨
 
