@@ -9,6 +9,11 @@ Following are the main technologies used in order to construct this frontend,
 * <a href="https://github.com/axios/axios">Axios</a>
 * <a href="https://socket.io/">Socket.io-client</a><br> 
 
+## Live Action 💥
+Visit the following website for live action of Whatsapp Clone Web
+
+<a href="https://whatsappclone-614cb.web.app/">WhatsApp Clone Web</a>
+
 ## Firebase Hosting 🔥
 Firebase Hosting allows fast and secure hosting for our web application, static and dynamic content, and microservices. It is production-grade web content hosting for the developers. We can easily and quickly deploy web apps and serve both static and dynamic content to a global content delivery network with only a single command. We can pair Firebase Hosting with Cloud Function for building and hosting microservices on Firebase. 
 
@@ -48,7 +53,7 @@ Builds the app for production to the build folder. It correctly bundles React in
 
 See the section about <a href="https://facebook.github.io/create-react-app/docs/deployment">deployment</a> for more information.
  
-## Other Platforms
+## Other Platforms ✨
 Refer the following links for platform specific implementation,
 * <a href="https://github.com/yuvraj24/WhatsApp-Clone/tree/master/app-client">Mobile App Client (Android & IOS)</a>
 * <a href="https://github.com/yuvraj24/WhatsApp-Clone/tree/master/web-server">Web Server (Backend)</a>
