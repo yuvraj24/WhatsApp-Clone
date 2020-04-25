@@ -17,8 +17,8 @@ Visit the following website for live action of Whatsapp Clone Web
 
 ## Other Platforms ✨
 Refer the following links for platform specific implementation,
-* <a href="https://github.com/yuvraj24/WhatsApp-Clone/tree/master/app-client">Mobile App Client (Android & IOS)</a>
-* <a href="https://github.com/yuvraj24/WhatsApp-Clone/tree/master/web-server">Web Server (Backend)</a>
+* <a href="https://github.com/yuvraj24/WhatsApp-Clone/blob/master/app-client/README.md">Mobile App Client (Android & IOS)</a>
+* <a href="https://github.com/yuvraj24/WhatsApp-Clone/blob/master/web-server/README.md">Web Server (Backend)</a>
 
 ## Screenshot
 <br>
