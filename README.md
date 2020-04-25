@@ -24,7 +24,7 @@ You can see the following features in action in this repository,
 ## Platform Support ✨
 Refer the following links for platform specific implementation,
 * <a href="https://github.com/yuvraj24/WhatsApp-Clone/edit/master/app-client">Mobile App Client (Android & IOS)</a>
-* <a href="https://github.com/yuvraj24/WhatsApp-Clone/edit/master/web-client">Web App Client (WhatsApp Web)</a>
+* <a href="https://github.com/yuvraj24/WhatsApp-Clone/edit/master/web-client">Web App Client (WhatsApp Clone Web)</a>
 * <a href="https://github.com/yuvraj24/WhatsApp-Clone/tree/master/web-server">Web Server (Backend)</a>
 
 ## Platform Screenshots 🏞️
