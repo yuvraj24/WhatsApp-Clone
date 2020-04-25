@@ -1,23 +1,25 @@
 # WhatsApp-Clone-Mobile-App 
-In an increasingly web-centric world, the website is generally its first impression as well as its first interaction with customers. This part of the repository mainly deals with the web client implementation of the Whatsapp clone. This represents the web version of Whtsapp which you use along side their mobile application.
+Since we live in a digitally smart world, more than 80 percent of people who owns mobile devices search for products and services online. Of this 80 percent, 27 percent search for mobile apps that is connected to the products or services they want to acquire.A mobile app is a major part of businesses, as it can help a business grow rapidly irrespective of the business type. This part represents the mobile app version of Whtsapp Clone.
 
-Following are the main technologies used in order to construct this frontend,
-* <a href="https://reactjs.org/">ReactJs</a> 
-* <a href="https://www.typescriptlang.org/">Typescript</a>
-* <a href="https://github.com/bvaughn/react-virtualized">React Virtualized</a> 
-* <a href="https://material-ui.com/">Material UI</a>
+Following are the main technologies used in order to construct this mobile app,
+* <a href="https://reactnative.dev/">React Native</a> 
+* <a href="https://reactnavigation.org/">React Navigation</a>
+* <a href="https://rnfirebase.io/storage/usage">Firebase Storage</a> 
+* <a href="https://nativebase.io/">Native Base</a>
 * <a href="https://github.com/axios/axios">Axios</a>
-* <a href="https://socket.io/">Socket.io-client</a><br> 
+* <a href="https://socket.io/">Socket.io-client</a><br>
+* <a href="https://github.com/react-native-community/react-native-camera">React Native Camera</a><br>
+* <a href="https://github.com/react-native-community/async-storage">AsyncStorage</a><br>
 
 ## Live Action 🌏
-Visit the following website for live action of Whatsapp Clone Web
+Donwload the Android apk from the link below for live experience of this app.
 
-<a href="https://whatsappclone-614cb.web.app/">WhatsApp Clone Web</a>
+<a href="https://github.com/yuvraj24/WhatsApp-Clone/blob/master/assets/WHClone_android_v1.apk">WhatsApp Clone : Android</a>
 
 
 ## Other Platforms ✨
 Refer the following links for platform specific implementation,
-* <a href="https://github.com/yuvraj24/WhatsApp-Clone/tree/master/app-client">Mobile App Client (Android & IOS)</a>
+* <a href="https://github.com/yuvraj24/WhatsApp-Clone/tree/master/web-client">Web Client (WhatsApp Web)</a>
 * <a href="https://github.com/yuvraj24/WhatsApp-Clone/tree/master/web-server">Web Server (Backend)</a>
 
 ## Screenshots : IOS
@@ -52,24 +54,24 @@ Just execute the command below & it will install all the dependencies mentioned 
 npm install
 ```
 
-### Start Whatsapp Clone Web
+### Start Whatsapp Clone Mobile App : Android
 
 ```js
-npm start
+react-native start
 ```
-Runs the app in the development mode. Open http://localhost:3000 to view it in the browser.
+Starts the package manager for bundling of javascript files.
 
 ```js
-npm test
+react-native run-android
 ```
-Launches the test runner in the interactive watch mode. See the section about running tests for more information.
+Launches the Android app in Emulator or physical device if connected any.
+
+### Start Whatsapp Clone Mobile App : IOS
 
 ```js
-npm run build
+react-native run-ios
 ```
-Builds the app for production to the build folder. It correctly bundles React in production mode and optimizes the build for the best performance. The build is minified and the filenames include the hashes. Your app is ready to be deployed!
-
-See the section about <a href="https://facebook.github.io/create-react-app/docs/deployment">deployment</a> for more information.
+Launches the IOS app in Simulator or physical device if connected any.
  
 
 ## Author  ✍️
