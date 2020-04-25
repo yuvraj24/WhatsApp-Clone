@@ -20,17 +20,17 @@ Refer the following links for platform specific implementation,
 * <a href="https://github.com/yuvraj24/WhatsApp-Clone/tree/master/app-client">Mobile App Client (Android & IOS)</a>
 * <a href="https://github.com/yuvraj24/WhatsApp-Clone/tree/master/web-server">Web Server (Backend)</a>
 
-## IOS Screenshots 
+## Screenshots : IOS
 
 | **Login** | **Register** | **Home** | **Chat Room** |  **Menu**  |  **Status**   |  **Status View** |
 | :-----------: | :---------: | :----------: | :----------: | :------------: | :---------: | :----------: |
-| ![](../assets/wh_ios4.png) | ![](../assets/wh_ios5.png) | ![](../assets/wh_ios1.png) | ![](../assets/wh_ios8.png) | ![](../assets/wh_ios3.png) | ![](../assets/wh_ios2.png)  | ![](../assets/wh_ios7.png) |
+| ![](../assets/wh_ios4.png) | ![](../assets/wh_ios5.png) | ![](../assets/wh_ios1.png) | ![](../assets/wh_ios8.png) | ![](../assets/wh_ios3.png) | ![](../assets/wh_ios2.png)  | ![](../assets/wh_ios6.png) |
 
-## Android Screenshots 
+## Screenshots : Android
 
 | **Login** | **Register** | **Home** | **Chat Room** |  **Menu**  |  **Status**   |  **Status View** |
 | :-----------: | :---------: | :----------: | :----------: | :------------: | :---------: | :----------: |
-| ![](../assets/wh_android1.png) | ![](../assets/wh_android2.png) | ![](../assets/wh_android3.png) | ![](../assets/wh_android4.png) | ![](../assets/wh_android5.png) | ![](../assets/wh_android6.png)  | ![](../assets/wh_android7.png) |
+| ![](../assets/wh_android1.png) | ![](../assets/wh_android2.png) | ![](../assets/wh_android3.png) | ![](../assets/wh_android8.png) | ![](../assets/wh_android5.png) | ![](../assets/wh_android4.png)  | ![](../assets/wh_android6.png) |
 
 ## Firebase Hosting 🔥
 Firebase Hosting allows fast and secure hosting for our web application, static and dynamic content, and microservices. It is production-grade web content hosting for the developers. We can easily and quickly deploy web apps and serve both static and dynamic content to a global content delivery network with only a single command. We can pair Firebase Hosting with Cloud Function for building and hosting microservices on Firebase. 
