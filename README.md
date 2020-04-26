@@ -23,6 +23,7 @@ You can see the following features in action in this repository,
 <br>
 
 ## Platform Support ✨
+The project includes **Mobile app developed for Android & IOS** platform along with a **Website similar to WhatsApp Web**. <br>
 Refer the following links for platform specific implementation,
 * <a href="https://github.com/yuvraj24/WhatsApp-Clone/blob/master/app-client/README.md">Mobile App Client (Android & IOS)</a>
 * <a href="https://github.com/yuvraj24/WhatsApp-Clone/blob/master/web-client/README.md">Web App Client (WhatsApp Clone Web)</a>
