@@ -4,7 +4,7 @@
 
 ![](assets/whclone4.png)
 
-Whatsapp Clone provides an in depth view of implementation on how to create a full-stack, mobile, hybrid web application from scratch. This repository covers implementation of 3 major platform's mainly Android, IOS & Web using React Native & MERN stack 🔥.
+Whatsapp Clone provides an in depth view of implementation on how to create a full-stack, mobile, hybrid web application from scratch. This repository covers implementation of 3 major platform's mainly Android, IOS & Web using React Native & MERN stack 🔥. 
 
 You can see the following features in action in this repository,
 * *Instant & Realtime textual One to One chat*
@@ -24,17 +24,11 @@ You can see the following features in action in this repository,
 
 ## Live Action ⚡
 
-* ### Mobile App
-Donwload the Android apk from the link below for live experience of this app.<br>
-<a href="https://github.com/yuvraj24/WhatsApp-Clone/blob/master/assets/WHClone_android_v1.apk">WhatsApp Clone : Android</a>
+* #### Android App : <a href="https://github.com/yuvraj24/WhatsApp-Clone/blob/master/assets/WHClone_android_v1.apk">WhatsApp Clone : Android</a>
 
-* ### Online Website
-Visit the following website for live action of Whatsapp Clone Web<br>
-<a href="https://whatsappclone-614cb.web.app/">WhatsApp Clone Web</a>
+* #### Online Website : <a href="https://whatsappclone-614cb.web.app/">WhatsApp Clone Web</a>
 
-* ### WhatsApp Status Library
-For displaying WhatsApp status like view you can check out the below npm with great extent of customisation & flexibility.<br>
-<a href="https://github.com/yuvraj24/react-native-stories-view">React Native Stories View</a>
+* #### WhatsApp Status Library : <a href="https://github.com/yuvraj24/react-native-stories-view">React Native Stories View</a>
 
 ## Platform Support ✨
 The project includes **Mobile app developed for Android & IOS** platform along with a **Website similar to WhatsApp Web**. <br>
