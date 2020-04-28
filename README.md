@@ -24,15 +24,15 @@ You can see the following features in action in this repository,
 
 ## Live Action ⚡
 
-### Mobile App
+* ### Mobile App
 Donwload the Android apk from the link below for live experience of this app.<br>
 <a href="https://github.com/yuvraj24/WhatsApp-Clone/blob/master/assets/WHClone_android_v1.apk">WhatsApp Clone : Android</a>
 
-### Online Website
+* ### Online Website
 Visit the following website for live action of Whatsapp Clone Web<br>
 <a href="https://whatsappclone-614cb.web.app/">WhatsApp Clone Web</a>
 
-### WhatsApp Status Library
+* ### WhatsApp Status Library
 For displaying WhatsApp status like view you can check out the below npm with great extent of customisation & flexibility.<br>
 <a href="https://github.com/yuvraj24/react-native-stories-view">React Native Stories View</a>
 
