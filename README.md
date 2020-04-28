@@ -22,6 +22,20 @@ You can see the following features in action in this repository,
 [![GitHub followers](https://img.shields.io/github/followers/yuvraj24.svg?style=social&label=Follow)](https://github.com/yuvraj24)  [![Twitter Follow](https://img.shields.io/twitter/follow/yuvrajpy24.svg?style=social)](https://twitter.com/yuvrajpy24)
 <br>
 
+## Live Action ⚡
+
+### Mobile App
+Donwload the Android apk from the link below for live experience of this app.<br>
+<a href="https://github.com/yuvraj24/WhatsApp-Clone/blob/master/assets/WHClone_android_v1.apk">WhatsApp Clone : Android</a>
+
+### Online Website
+Visit the following website for live action of Whatsapp Clone Web<br>
+<a href="https://whatsappclone-614cb.web.app/">WhatsApp Clone Web</a>
+
+### WhatsApp Status Library
+For displaying WhatsApp status like view you can check out the below npm with great extent of customisation & flexibility.<br>
+<a href="https://github.com/yuvraj24/react-native-stories-view">React Native Stories View</a>
+
 ## Platform Support ✨
 The project includes **Mobile app developed for Android & IOS** platform along with a **Website similar to WhatsApp Web**. <br>
 Refer the following links for platform specific implementation,
@@ -34,20 +48,6 @@ Refer the following links for platform specific screenshots,
 * <a href="https://github.com/yuvraj24/WhatsApp-Clone/blob/master/app-client/README.md#screenshots--ios">Android</a>
 * <a href="https://github.com/yuvraj24/WhatsApp-Clone/blob/master/app-client/README.md#screenshots--android">IOS</a>
 * <a href="https://github.com/yuvraj24/WhatsApp-Clone/tree/master/web-client#screenshot">Website</a>
-
-## Live Action ⚡
-
-### Mobile App 📱
-Donwload the Android apk from the link below for live experience of this app.<br>
-<a href="https://github.com/yuvraj24/WhatsApp-Clone/blob/master/assets/WHClone_android_v1.apk">WhatsApp Clone : Android</a>
-
-### Website 🌏
-Visit the following website for live action of Whatsapp Clone Web<br>
-<a href="https://whatsappclone-614cb.web.app/">WhatsApp Clone Web</a>
-
-### WhatsApp Status Library ✨
-For displaying WhatsApp status like view you can check out the below npm with great extent of customisation & flexibility.<br>
-<a href="https://github.com/yuvraj24/react-native-stories-view">React Native Stories View</a>
 
 ## Author  ✍️
 
