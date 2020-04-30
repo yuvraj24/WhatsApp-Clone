@@ -6,7 +6,7 @@
 
 Whatsapp Clone provides an in depth view of implementation on how to create a full-stack, mobile, hybrid web application from scratch. This repository covers implementation of 3 major platform's mainly Android, IOS & Web using React Native & MERN stack 🔥. 
 
-You can see the following features in action in this repository,
+**You can see the following features in action in this repository,**
 * *Instant & Realtime textual One to One chat*
 * *User's Online/Offline availability*
 * *Last Seen time*
@@ -15,6 +15,19 @@ You can see the following features in action in this repository,
 * *Multiple Status view along with progress*
 * *Web Login via QR code scan*
 * *WhatsApp Web with realtime chat & status*
+
+**Major technologies used to construct this project are as follows,**
+
+|               MOBILE                           |      WEB                  |           SERVER             |
+|:------------------------------------------------|:------------------------|:------------------------|
+| <a href="https://reactnative.dev/">React Native</a>  | <a href="https://reactjs.org/">ReactJs</a> | <a href="https://nodejs.org/">NodeJs</a>  |
+| <a href="https://rnfirebase.io/storage/usage">Firebase Storage</a> | <a href="https://www.typescriptlang.org/">Typescript</a> | <a href="https://expressjs.com/">ExpressJs</a> |
+| <a href="https://nativebase.io/">Native Base</a> | <a href="https://github.com/bvaughn/react-virtualized">React Virtualized</a> | <a href="https://www.mongodb.com/">MongoDb</a> |
+| <a href="https://github.com/axios/axios">Axios</a> | <a href="https://material-ui.com/">Material UI</a> | <a href="https://mongoosejs.com/">Mongoose</a> |
+| <a href="https://socket.io/">Socket.io-client</a><br> | <a href="https://github.com/axios/axios">Axios</a> | <a href="https://socket.io/">Socket.io</a><br> |
+| <a href="https://reactjs.org/">ReactJs</a>  | <a href="https://socket.io/">Socket.io-client</a> | <a href="https://www.typescriptlang.org/">Typescript</a> |
+| <a href="https://reactnavigation.org/">React Navigation</a> | <a href="https://github.com/auth0/node-jsonwebtoken">JSON WebToken</a> |
+| <a href="https://github.com/react-native-community/react-native-camera">React Native Camera</a> |  |
 
 **If you like the work then don't forget to hit that ⭐ button to show some appreciation & love for this project as your token of love does wonders.**
 
