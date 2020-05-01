@@ -20,6 +20,7 @@ Whatsapp Clone provides an in depth view of implementation on how to create a fu
 If you like the work then don't forget to hit that ⭐ button to show some appreciation & love
 for this project as your token of love does wonders.
 ```
+
 ## Major Technologies Used
 
 |               MOBILE                           |      WEB                  |           SERVER             |
@@ -33,11 +34,12 @@ for this project as your token of love does wonders.
 | <a href="https://reactnavigation.org/">React Navigation</a> | <a href="https://github.com/auth0/node-jsonwebtoken">JSON WebToken</a> |
 | <a href="https://github.com/react-native-community/react-native-camera">React Native Camera</a> |  |
 
+
 ## Spread Your ❤️
 [![GitHub followers](https://img.shields.io/github/followers/yuvraj24.svg?style=social&label=Follow)](https://github.com/yuvraj24)  [![Twitter Follow](https://img.shields.io/twitter/follow/yuvrajpy24.svg?style=social)](https://twitter.com/yuvrajpy24)
 <br>
 
-## Live Action ⚡
+## Live Action
 
 * #### Android App : <a href="https://github.com/yuvraj24/WhatsApp-Clone/blob/master/assets/WHClone_android_v1.apk">WhatsApp Clone : Android</a>
 
@@ -45,20 +47,20 @@ for this project as your token of love does wonders.
 
 * #### WhatsApp Status Library : <a href="https://github.com/yuvraj24/react-native-stories-view">React Native Stories View</a>
 
-## Platform Support ✨
+## Platform Support
 The project includes **Mobile app developed for Android & IOS** platform along with a **Website similar to WhatsApp Web**. <br>
 Refer the following links for platform specific implementation,
 * <a href="https://github.com/yuvraj24/WhatsApp-Clone/blob/master/app-client/README.md">Mobile App Client (Android & IOS)</a>
 * <a href="https://github.com/yuvraj24/WhatsApp-Clone/blob/master/web-client/README.md">Web App Client (WhatsApp Clone Web)</a>
 * <a href="https://github.com/yuvraj24/WhatsApp-Clone/blob/master/web-server/README.md">Web Server (Backend)</a>
 
-## Platform Screenshots 🏞️
+## Platform Screenshots
 Refer the following links for platform specific screenshots,
 * <a href="https://github.com/yuvraj24/WhatsApp-Clone/blob/master/app-client/README.md#screenshots--ios">Android</a>
 * <a href="https://github.com/yuvraj24/WhatsApp-Clone/blob/master/app-client/README.md#screenshots--android">IOS</a>
 * <a href="https://github.com/yuvraj24/WhatsApp-Clone/tree/master/web-client#screenshot">Website</a>
 
-## Author  ✍️
+## Author
 
 ### *Yuvraj Pandey*
 *I am a passionate Engineer which likes to push himself on various fronts of technologies.*  
