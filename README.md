@@ -20,8 +20,6 @@ Whatsapp Clone provides an in depth view of implementation on how to create a fu
 If you like the work then don't forget to hit that ⭐ button to show some appreciation & love
 for this project as your token of love does wonders.
 ```
-<br>
-
 ## Major Technologies Used
 
 |               MOBILE                           |      WEB                  |           SERVER             |
@@ -34,7 +32,6 @@ for this project as your token of love does wonders.
 | <a href="https://reactjs.org/">ReactJs</a>  | <a href="https://socket.io/">Socket.io-client</a> | <a href="https://www.typescriptlang.org/">Typescript</a> |
 | <a href="https://reactnavigation.org/">React Navigation</a> | <a href="https://github.com/auth0/node-jsonwebtoken">JSON WebToken</a> |
 | <a href="https://github.com/react-native-community/react-native-camera">React Native Camera</a> |  |
-<br>
 
 ## Spread Your ❤️
 [![GitHub followers](https://img.shields.io/github/followers/yuvraj24.svg?style=social&label=Follow)](https://github.com/yuvraj24)  [![Twitter Follow](https://img.shields.io/twitter/follow/yuvrajpy24.svg?style=social)](https://twitter.com/yuvrajpy24)
