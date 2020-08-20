@@ -60,6 +60,16 @@ Refer the following links for platform specific screenshots,
 * <a href="https://github.com/yuvraj24/WhatsApp-Clone/blob/master/app-client/README.md#screenshots--android">IOS</a>
 * <a href="https://github.com/yuvraj24/WhatsApp-Clone/tree/master/web-client#screenshot">Website</a>
 
+## Overview 
+|               IOS                                |        ANDROID           |
+|:------------------------------------------------:|:------------------------:|
+| <img src="https://github.com/yuvraj24/WhatsApp-Clone/blob/master/assets/wh_ios1.png" width="500" height="900" /> |<nbsp><nbsp><nbsp> <img src="https://github.com/yuvraj24/WhatsApp-Clone/blob/master/assets/wh_android3.png" width="500" height="900" /> | 
+
+|             WEB             |
+|:----------------------------:|
+| <img src="https://github.com/yuvraj24/WhatsApp-Clone/blob/master/assets/wh_web4.png" width="1200" height="500" /> |
+
+
 ## Author
 
 ### *Yuvraj Pandey*
