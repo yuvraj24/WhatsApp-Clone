@@ -61,7 +61,7 @@ Refer the following links for platform specific screenshots,
 * <a href="https://github.com/yuvraj24/WhatsApp-Clone/tree/master/web-client#screenshot">Website</a>
 
 ## Overview  
-|             WEB             |
+|             ***             |
 |:----------------------------:|
 | <img src="https://github.com/yuvraj24/WhatsApp-Clone/blob/master/assets/overview.png"/> |
 
