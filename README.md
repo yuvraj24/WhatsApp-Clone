@@ -39,6 +39,11 @@ for this project as your token of love does wonders.
 [![GitHub followers](https://img.shields.io/github/followers/yuvraj24.svg?style=social&label=Follow)](https://github.com/yuvraj24)  [![Twitter Follow](https://img.shields.io/twitter/follow/yuvrajpy24.svg?style=social)](https://twitter.com/yuvrajpy24)
 <br>
 
+## Overview  
+|                        |
+|:----------------------------:|
+| <img src="https://github.com/yuvraj24/WhatsApp-Clone/blob/master/assets/overview.png"/> |
+
 ## Live Action
 
 * #### Android App : <a href="https://github.com/yuvraj24/WhatsApp-Clone/blob/master/assets/WHClone_android_v1.apk">WhatsApp Clone : Android</a>
@@ -59,12 +64,6 @@ Refer the following links for platform specific screenshots,
 * <a href="https://github.com/yuvraj24/WhatsApp-Clone/blob/master/app-client/README.md#screenshots--ios">Android</a>
 * <a href="https://github.com/yuvraj24/WhatsApp-Clone/blob/master/app-client/README.md#screenshots--android">IOS</a>
 * <a href="https://github.com/yuvraj24/WhatsApp-Clone/tree/master/web-client#screenshot">Website</a>
-
-## Overview  
-|             ***             |
-|:----------------------------:|
-| <img src="https://github.com/yuvraj24/WhatsApp-Clone/blob/master/assets/overview.png"/> |
-
 
 ## Author
 
