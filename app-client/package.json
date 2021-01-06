@@ -16,7 +16,7 @@
     "@react-native-firebase/storage": "^6.4.0",
     "@react-navigation/native": "^5.0.5",
     "@react-navigation/stack": "^5.0.5",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "mem": "^6.1.0",
     "moment": "^2.24.0",
     "native-base": "^2.13.8",
