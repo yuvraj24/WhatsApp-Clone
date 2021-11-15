@@ -10,7 +10,7 @@
     "@testing-library/user-event": "^7.2.1",
     "@types/react-router-dom": "^5.1.4",
     "activity-detector": "^3.0.0",
-    "axios": "^0.21.1",
+    "axios": "^0.21.2",
     "moment": "^2.24.0",
     "qrcode.react": "^1.0.0",
     "react": "^16.13.1",
