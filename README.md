@@ -70,7 +70,7 @@ Refer the following links for platform specific screenshots,
 ## Author
 
 ### *Yuvraj Pandey*
-*I am a passionate Engineer which likes to push himself on various fronts of technologies.*  
+*I am a passionate senior Engineer which likes to push himself on various fronts of technologies.*  
 
 For more exciting updates follow me,
 
