@@ -22,7 +22,7 @@
     "jsonwebtoken": "^8.5.1",
     "moment": "^2.24.0",
     "mongodb": "^3.5.5",
-    "mongoose": "^5.9.5",
+    "mongoose": "^6.13.9",
     "nodemon": "^2.0.2",
     "react-router-dom": "^5.1.2",
     "socket.io": "^2.3.0",
