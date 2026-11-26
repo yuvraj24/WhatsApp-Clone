@@ -1,5 +1,5 @@
-# WhatsApp-Clone-Mobile-App 
-Since we live in a digitally smart world, more than 80 percent of people who owns mobile devices search for products and services online. Of this 80 percent, 27 percent search for mobile apps that is connected to the products or services they want to acquire.A mobile app is a major part of businesses, as it can help a business grow rapidly irrespective of the business type. This part represents the mobile app version of Whtsapp Clone.
+# FRWhatsapp Mobile App
+FRWhatsapp is a real-time mobile chat application built for Android and iOS. This app is based on the existing chat platform implementation and includes chats, status updates, contacts, and QR-based web login.
 
 Following are the main technologies used in order to construct this mobile app,
 * <a href="https://reactnative.dev/">React Native</a> 

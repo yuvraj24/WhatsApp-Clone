@@ -10,7 +10,9 @@ const api = axios.create({
 api.interceptors.request.use(
   async request => {
     const token = await getLocalData(constants.ACCESS_TOKEN);
-    request.headers = {Authorization: token};
+    request.headers = token
+      ? {Authorization: `Bearer ${token}`}
+      : {};
     console.log('Request Interceptor = ', request);
     return request;
   },
@@ -47,6 +49,10 @@ export const updateChatRoom = payload => {
 
 export const loginUser = payload => {
   return api.post(constants.API.LOGIN_USER, payload);
+};
+
+export const syncUserSession = displayName => {
+  return api.post('/user/session', {displayName});
 };
 
 export const getLoggedInUserList = payload => {

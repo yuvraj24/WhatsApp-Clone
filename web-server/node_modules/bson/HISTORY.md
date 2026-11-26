@@ -1,3 +1,21 @@
+# Changelog
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+### [1.1.6](https://github.com/mongodb/js-bson/compare/v1.1.5...v1.1.6) (2021-03-16)
+
+
+### Bug Fixes
+
+* Throw error on bigint usage and add helpers to Long ([#426](https://github.com/mongodb/js-bson/issues/426)) ([375f368](https://github.com/mongodb/js-bson/commit/375f368738807f2d41c7751e618fd09c8a1b94c9))
+
+### [1.1.5](https://github.com/mongodb/js-bson/compare/v1.1.4...v1.1.5) (2020-08-10)
+
+
+### Bug Fixes
+
+* **object-id:** harden the duck-typing ([b526145](https://github.com/mongodb/js-bson/commit/b5261450c3bc4abb2e2fb19b5b1a7aba27982d44))
+
 <a name="1.1.3"></a>
 ## [1.1.3](https://github.com/mongodb/js-bson/compare/v1.1.2...v1.1.3) (2019-11-09)
 

@@ -49,6 +49,7 @@ import {StackActions} from '@react-navigation/native';
 import {loginUser} from '../../api/apiController';
 import {BorderlessButton} from 'react-native-gesture-handler';
 import LoadingComponent from '../../components/LoadingComponent';
+import auth from '@react-native-firebase/auth';
 
 var {
   container,
@@ -91,25 +92,31 @@ const RegisterScreen = ({navigation}) => {
     } else if (mobile === '') {
       showToast({text: 'Enter your Mobile Number', type: 'danger'});
     } else {
-      setLoading(!isLoading);
-      loginUser(getLoginModel(userName, mobile))
-        .then(res => {
-          setLoading(isLoading);
-          console.log('TOKEN : ', res.headers.token);
-          setUserName('');
-          setMobile('');
-          console.log('LOGIN RESPONSE => ' + JSON.stringify(res));
+      const callingCode =
+        country && country.callingCode
+          ? country.callingCode[0] || country.callingCode
+          : countryCode;
+      const phoneNumber = `+${String(callingCode).replace(/\D/g, '')}${mobile.replace(/\D/g, '')}`;
 
-          if (res.data.success) {
-            storeLocalData(constants.ACCESS_TOKEN, res.headers.token);
-            storeLocalData(constants.USER_ID, res.data.id);
-            storeLocalData(constants.USER_NAME, userName);
-
-            navigation.navigate(NAV_TYPES.HOME_SCREEN, {});
-          }
+      setLoading(true);
+      auth()
+        .signInWithPhoneNumber(phoneNumber)
+        .then(confirmResult => {
+          setLoading(false);
+          navigation.navigate(NAV_TYPES.OTP, {
+            confirmResult,
+            displayName: userName,
+            phoneNumber,
+          });
         })
         .catch(error => {
-          console.log('LOGIN ERROR ', error);
+          setLoading(false);
+          showToast({
+            text: error.code === 'auth/invalid-phone-number'
+              ? 'Enter a valid mobile number'
+              : 'Could not send SMS. Check Firebase Phone Authentication.',
+            type: 'danger',
+          });
         });
     }
   };
@@ -127,7 +134,7 @@ const RegisterScreen = ({navigation}) => {
           behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
           style={styles.keyboardView}>
           <View style={styles.headerView}>
-            <Icon type="FontAwesome" name="whatsapp" style={styles.logoStyle} />
+            <Icon type="FontAwesome" name="comments" style={styles.logoStyle} />
             <_Text style={styles.logoTextStyle}>{constants.APP_NAME}</_Text>
           </View>
           <ScrollView

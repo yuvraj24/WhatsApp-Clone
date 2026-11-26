@@ -1,7 +1,4 @@
 import mongoose, { Mongoose } from "mongoose";
-import { ChatBody } from "./ChatRoomModel";
-import jwt from "jsonwebtoken";
-import config from "config";
 
 const Schema = mongoose.Schema;
 
@@ -16,8 +13,7 @@ const loginUserSchema = new Schema(
   { timestamps: true }
 );
 
-loginUserSchema.methods.generateAuthToken = function (userId: String) {
-  return jwt.sign({ id: userId ? userId : this._id }, config.get("privateKey"));
-};
+loginUserSchema.index({ userId: 1 }, { unique: true, sparse: true });
+loginUserSchema.index({ phoneNumber: 1 }, { unique: true });
 
 export const LoginUserModel = mongoose.model("loginUser", loginUserSchema);

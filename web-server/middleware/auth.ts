@@ -1,19 +1,22 @@
-import jwt from "jsonwebtoken";
-import config from "config";
+import { verifyPhoneIdToken } from "../services/firebaseAdmin";
 
-export default function authUser(req: any, res: any, next: any) {
-  //get the token from the header if present
-  const token = req.headers["x-access-token"] || req.headers["authorization"];
+export default async function authUser(req: any, res: any, next: any) {
+  const authorization = req.headers.authorization;
 
-  //if no token found, return response (without going to the next middelware)
-  if (!token) return res.status(401).send("Access denied, No token provided.");
+  if (!authorization || !authorization.startsWith("Bearer ")) {
+    return res.status(401).send("A Firebase ID token is required.");
+  }
 
   try {
-    const decoded = jwt.verify(token, config.get("privateKey"));
-    req.user = decoded;
+    const decodedToken = await verifyPhoneIdToken(
+      authorization.slice("Bearer ".length)
+    );
+    req.user = {
+      id: decodedToken.uid,
+      phoneNumber: decodedToken.phone_number,
+    };
     next();
   } catch (error) {
-    //if invalid token
-    res.status(400).send("Invalid token.");
+    return res.status(401).send("The Firebase ID token is invalid.");
   }
-};
+}

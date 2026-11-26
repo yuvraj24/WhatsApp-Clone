@@ -13,8 +13,12 @@ export default (constants = {
     //     // : 'http://192.168.0.100:3000/', 
     // : 'http://localhost:3000/',
 
-    SERVER_URL: "https://watsappclone.herokuapp.com/api",
-    SOCKET_URL: "https://watsappclone.herokuapp.com/", 
+    SERVER_URL: Platform.OS === 'android'
+      ? 'http://10.0.2.2:3001/api'
+      : 'http://localhost:3001/api',
+    SOCKET_URL: Platform.OS === 'android'
+      ? 'http://10.0.2.2:3001/'
+      : 'http://localhost:3001/',
 
     LOGIN_USER: '/user/loginUser',
     USER_LIST: '/user/userList',
@@ -27,7 +31,7 @@ export default (constants = {
     GET_ALL_STATUS: '/status/getAllStatus',
     SET_STATUS_VIEWED: '/status/statusViewed',
   },
-  APP_NAME: 'WhatsApp Clone',
+  APP_NAME: 'FRWhatsapp',
   USER_ID: 'UserId',
   ACCESS_TOKEN: 'AccessToken',
   USER_NAME: 'UserName',
