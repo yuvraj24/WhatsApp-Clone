@@ -1,6 +1,6 @@
 import { webConstants } from "./webConstants";
 import moment from "moment"; 
-import io from "socket.io-client"; 
+import { io } from "socket.io-client";
 
 export const getTimeInFormat = time => {
   if (time === "") {
@@ -92,8 +92,11 @@ export const getUserTypeChatRoom = (item, userId) => {
   }
 }; 
 
-export function getSocket() {
-  return io.connect(webConstants.API.SOCKET_URL);
+export function getSocket(token) {
+  return io(webConstants.API.SOCKET_URL, {
+    autoConnect: Boolean(token),
+    auth: token ? { token } : {},
+  });
 }
 
 export const getDateTimeStatusFormat = time => {

@@ -1,15 +1,15 @@
-# WhatsApp-Clone-Server
+# FRWhatsapp Server
 
-The backend of an application is responsible for things like calculations, business logic, database interactions, and performance. Most of the code that is required to make an application work will be done on the backend.This part of the repository mainly deals with the server side implementation of the Whatsapp clone. 
+The backend for FRWhatsapp's independent web messenger.
 
-Following are the technologies used in order to construct this backend,
+The server uses:
 * <a href="https://nodejs.org/">NodeJs</a> 
 * <a href="https://expressjs.com/">ExpressJs</a>
 * <a href="https://www.mongodb.com/">MongoDb</a>
 * <a href="https://mongoosejs.com/">Mongoose</a> 
-* <a href="https://socket.io/">Socket.io</a><br> 
+* <a href="https://socket.io/">Socket.io</a>
 * <a href="https://www.typescriptlang.org/">Typescript</a>
-* <a href="https://github.com/auth0/node-jsonwebtoken">JSON WebToken</a>
+* <a href="https://firebase.google.com/docs/admin/setup">Firebase Admin SDK</a>
 
 ## Other Platforms ✨
 Refer the following links for platform specific implementation,
@@ -33,10 +33,30 @@ mLab is a fully managed cloud database service that hosts MongoDB databases. mLa
 
 ## Getting Started ✨
 
-### Install Dependencies
-```js
-npm install express cors mongoose nodemon typescript config moment ts-node
-```
+### Configure the server
+
+The server requires `MONGODB_URI`, `FIREBASE_PROJECT_ID`, and Google
+Application Default Credentials. For local development, set
+`GOOGLE_APPLICATION_CREDENTIALS` to a service-account JSON file stored outside
+the repository. Set the environment values in your deployment configuration;
+do not commit credentials or paste them into source files. The development
+server defaults to port `3001`.
+
+For local development, fill in `web-client/.env` and `web-server/.env`.
+Use the same Firebase project ID in both files, enable Phone sign-in in Firebase
+Authentication, and add `localhost` to the authorized domains. Set
+`MONGODB_URI` to your MongoDB connection string and
+`GOOGLE_APPLICATION_CREDENTIALS` to the local path of your Firebase service
+account JSON file. The `.env` files and service-account file must remain
+untracked and outside source control.
+
+The web server verifies Firebase ID tokens for phone-authenticated users. It
+only exposes phone-number search for registered FRWhatsapp users; it does not
+connect to personal WhatsApp accounts. Messages in this initial MVP are stored
+on the server and are not end-to-end encrypted.
+
+Install dependencies from the server directory with `npm install`. Configure the
+environment variables listed in `.env.example` before starting the server.
 
 ### Install MongoDb
 MongoDB is a general purpose, document-based, distributed database built for modern application developers. MongoDB is a document database, which means it stores data in JSON-like documents.
@@ -56,36 +76,10 @@ $ brew services start mongodb-community
 For windows installation *<a href="https://docs.mongodb.com/manual/administration/install-community/" target="_blank">click here</a>*.
 
 
-### Install Socket.io
-Socket.IO enables real-time bidirectional event-based communication which is used here for realtime transmission of data across all the active users.
-```js
-npm install socket.io
-```
-
-Sample code:
-```js
-io.on('connection', socket => {
-  socket.emit('request', /* … */); // emit an event to the socket
-  io.emit('broadcast', /* … */); // emit an event to all connected sockets
-  socket.on('reply', () => { /* … */ }); // listen to the event
-});
-```
-
-Check out their <a href="https://github.com/socketio/socket.io">Github Link</a> for more information.
-
-### Install JSON Web Token
-
-JSON Web Token (JWT) is a compact, URL-safe means of representing claims to be transferred between two parties.  The claims in a JWT are encoded as a JSON object that is used as the payload of a JSON Web Signature (JWS) structure or as the plaintext of a JSON Web Encryption (JWE) structure, enabling the claims to be digitally signed or integrity protected with a Message Authentication Code (MAC) and/or encrypted.
-```js
-npm install jsonwebtoken
-```
-Check out their <a href="https://github.com/auth0/node-jsonwebtoken">Github Link</a> for more information.
-
 ## Start Server ⚡
-Once the installation is completed as highlighted above you can now move on to start the server & experience the magic yourself.
-```js
+```sh
 cd web-server
-nodemon start
+npm start
 ```
 
 ## Author  ✍️

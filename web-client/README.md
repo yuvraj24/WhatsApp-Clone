@@ -1,5 +1,6 @@
-# WhatsApp-Clone-Web 
-In an increasingly web-centric world, the website is generally its first impression as well as its first interaction with customers. This part of the repository mainly deals with the web client implementation of the Whatsapp clone. This represents the web version of Whtsapp which you use along side their mobile application.
+# FRWhatsApp Web
+
+The web client is the browser interface for FRWhatsApp, an independent messaging-app project.
 
 Following are the main technologies used in order to construct this frontend,
 * <a href="https://reactjs.org/">ReactJs</a> 
@@ -9,10 +10,11 @@ Following are the main technologies used in order to construct this frontend,
 * <a href="https://github.com/axios/axios">Axios</a>
 * <a href="https://socket.io/">Socket.io-client</a><br> 
 
-## Live Action 🌏
-Visit the following website for live action of Whatsapp Clone Web
+## Existing Upstream Demo
 
-<a href="https://whatsappclone-614cb.web.app/">WhatsApp Clone Web</a>
+The live deployment linked below is the original WhatsApp Clone demo; it is not the FRWhatsApp application.
+
+<a href="https://whatsappclone-614cb.web.app/">Original WhatsApp Clone Web demo</a>
 
 
 ## Other Platforms ✨
@@ -44,9 +46,13 @@ Firebase Hosting, by default, provides an SSL certificate and offers an impressi
 
 ## Getting Started ✨
 
-This project follows the same steps as compared to Whatsapp web in order to access your chat information. 
-* The very first page of the project displays a Qr Code which you have to scan from your logged in mobile app.
-* On successfull completion of scan you will be redirected to the home page where in you can see your chats & status.
+The FRWhatsapp web client uses Firebase Phone Authentication for account
+registration. Configure the Firebase web environment variables in
+`.env.example`, enable Phone sign-in in Firebase Authentication, and add the
+development/production domains to Firebase's authorized domains. The first
+verification message is sent only after the user requests it from the form.
+Contacts can search for one another by verified phone number and chat after
+both have FRWhatsapp accounts.
 
 ### Install Dependencies
 Just execute the command below & it will install all the dependencies mentioned in the ```package.json``` file of the project.
@@ -54,11 +60,16 @@ Just execute the command below & it will install all the dependencies mentioned 
 npm install
 ```
 
-### Start Whatsapp Clone Web
+### Start FRWhatsApp Web
 
 ```js
 npm start
 ```
+
+The web client defaults to the local API at `http://localhost:3001`. To use a
+different server, set `REACT_APP_API_URL` and `REACT_APP_SOCKET_URL` in a local
+`.env` file based on `.env.example`. Never put API secrets in the web client.
+
 Runs the app in the development mode. Open http://localhost:3000 to view it in the browser.
 
 ```js

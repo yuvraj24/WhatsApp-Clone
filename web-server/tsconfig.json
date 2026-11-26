@@ -5,6 +5,7 @@
     "lib": ["es2018", "esnext.asynciterable"],
     "skipLibCheck": true,
     "strict": true,
+    "useUnknownInCatchVariables": false,
     "strictFunctionTypes": false,
     "strictPropertyInitialization": false,
     "esModuleInterop": true,

@@ -1,10 +1,9 @@
 export const webConstants = {
   API: {
-// SERVER_URL: "http://localhost:3000/api",
-//     SOCKET_URL: "http://localhost:3000/", 
-
-    SERVER_URL: "https://watsappclone.herokuapp.com/api",
-    SOCKET_URL: "https://watsappclone.herokuapp.com/", 
+    SERVER_URL:
+      process.env.REACT_APP_API_URL || "http://localhost:3001/api",
+    SOCKET_URL:
+      process.env.REACT_APP_SOCKET_URL || "http://localhost:3001/",
 
     LOGIN_USER: '/user/loginUser',
     USER_LIST: '/user/userList',

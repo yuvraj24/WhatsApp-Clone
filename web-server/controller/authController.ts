@@ -1,69 +1,85 @@
 import { LoginUserModel } from "../model/LoginUserModel";
 
-// User Login
-export const loginUser = async (req: any, res: any) => {
-  // Check if body is received or not
-  const body = req.body;
-  if (!body) {
-    return res.status(200).json({
+export const syncAuthenticatedUser = async (req: any, res: any) => {
+  const displayName =
+    typeof req.body.displayName === "string" ? req.body.displayName.trim() : "";
+
+  if (displayName.length > 40) {
+    return res.status(400).json({
       success: false,
-      message: "Login Failed",
+      message: "Display name must be 40 characters or fewer.",
     });
   }
 
-  const user = (await LoginUserModel.findOne({
-    $or: [{ userName: body.userName }, { phoneNumber: body.phoneNumber }],
-  })) as any;
-
   try {
-    const loginUser = new LoginUserModel(body) as any;
-    console.log("Login User => ", user);
-    // Create New User
-    if (user === null) {
-      await loginUser.save();
+    const user = await LoginUserModel.findOneAndUpdate(
+      { userId: req.user.id },
+      {
+        $set: {
+          phoneNumber: req.user.phoneNumber,
+          userName: displayName || req.user.phoneNumber,
+          numberType: "MOBILE",
+        },
+      },
+      { new: true, upsert: true, runValidators: true, setDefaultsOnInsert: true }
+    ).select("userId userName phoneNumber");
 
-      // Update User ID as mongodb row ID
-      await LoginUserModel.updateOne(
-        { userName: body.userName },
-        { $set: { userId: loginUser._id } }
-      );
-
-      const token = loginUser.generateAuthToken();
-      console.log(token);
-      res.status(200).header("token", token).json({
-        success: true,
-        id: loginUser._id,
-        message: "Login Successfull",
-      });
-    } else {
-      console.log("Registered User : ", user.userId);
-
-      // Return already registered users
-      const token = loginUser.generateAuthToken(user.userId);
-      console.log("AUTH_TOKEN = ", token);
-      res.status(200).header("token", token).json({
-        success: true,
-        id: user.userId,
-        message: "Registered User",
-      });
-    }
+    return res.status(200).json({ success: true, data: user });
   } catch (error) {
-    return res.status(200).json({
+    console.error("Failed to sync authenticated user:", error.message);
+    return res.status(500).json({
       success: false,
-      message: error.message,
+      message: "Could not save your FRWhatsapp profile.",
     });
   }
 };
 
-// Fetch Main User List
-export const getLoggedInUserList = async (req: any, res: any) => {
+export const getAuthenticatedUser = async (req: any, res: any) => {
   try {
-    const users = await LoginUserModel.find({});
-    if (!users) {
-      return res.status(200).json({ success: false, message: "Api Failed" });
+    const user = await LoginUserModel.findOne({ userId: req.user.id }).select(
+      "userId userName phoneNumber"
+    );
+
+    if (!user) {
+      return res.status(404).json({
+        success: false,
+        message: "Profile not found. Complete account setup first.",
+      });
     }
-    return res.status(200).json({ success: true, data: users });
-  } catch (err) {
-    return res.status(200).json({ success: false, message: err });
+
+    return res.status(200).json({ success: true, data: user });
+  } catch (error) {
+    console.error("Failed to load authenticated user:", error.message);
+    return res.status(500).json({
+      success: false,
+      message: "Could not load your FRWhatsapp profile.",
+    });
+  }
+};
+
+export const searchUserByPhone = async (req: any, res: any) => {
+  const phoneNumber =
+    typeof req.query.phoneNumber === "string" ? req.query.phoneNumber : "";
+
+  if (!/^\+[1-9]\d{6,14}$/.test(phoneNumber)) {
+    return res.status(400).json({
+      success: false,
+      message: "Enter a phone number in international format.",
+    });
+  }
+
+  try {
+    const user = await LoginUserModel.findOne({
+      phoneNumber,
+      userId: { $ne: req.user.id },
+    }).select("userId userName phoneNumber");
+
+    return res.status(200).json({ success: true, data: user || null });
+  } catch (error) {
+    console.error("Failed to search FRWhatsapp user:", error.message);
+    return res.status(500).json({
+      success: false,
+      message: "Could not search for that FRWhatsapp account.",
+    });
   }
 };

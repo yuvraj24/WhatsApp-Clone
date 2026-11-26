@@ -63,7 +63,7 @@ const HomeHeader = ({navigation}) => {
       {/* <View style={styles.parentView}> */}
       {/* <Image source={prodileImage} style={styles.imageRounded} /> */}
       <_Text title style={styles.userName}>
-        WhatsApp Clone
+        FRWhatsapp
       </_Text>
       {/* </View> */}
       <View style={styles.parentView}>
@@ -89,7 +89,7 @@ const HomeHeader = ({navigation}) => {
           <MenuItem
             textStyle={styles.menuTextStyle}
             onPress={navigateQrScannerScreen}>
-            {'Whatsapp Web'}
+            {'FRWhatsapp Web'}
           </MenuItem>
           <MenuDivider />
           <MenuItem
